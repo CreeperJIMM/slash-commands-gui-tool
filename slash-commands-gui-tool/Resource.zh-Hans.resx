@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AutoSaved" xml:space="preserve">
+    <value>自动存挡成功!</value>
+  </data>
+  <data name="AutoSync" xml:space="preserve">
+    <value>自动存挡</value>
+  </data>
+  <data name="BackupNotEmpty" xml:space="preserve">
+    <value>检测到本地端有斜杠指令存在，若有重复的名称将会覆盖本地的指令！请点确认继续</value>
+  </data>
+  <data name="ChangeMsg" xml:space="preserve">
+    <value>你有尚未储存的修改！查看其他指令将会舍弃已修改的内容！
+请问要储存当前已修改的内容吗?</value>
+  </data>
+  <data name="ChoiceConfig" xml:space="preserve">
+    <value>选择设置</value>
+  </data>
+  <data name="ClientError" xml:space="preserve">
+    <value>客户端错误!</value>
+  </data>
+  <data name="ClientErrorMsg" xml:space="preserve">
+    <value>请确保输入的机器人令牌是正确有效的</value>
+  </data>
+  <data name="ClientErrorMsg2" xml:space="preserve">
+    <value>请求的资料与ID不符</value>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>联线中...</value>
+  </data>
+  <data name="ConnectionSuccessful" xml:space="preserve">
+    <value>联线成功！</value>
+  </data>
+  <data name="DeleDatabase" xml:space="preserve">
+    <value>您确定要重置资料库吗？这将删除所有已储存的客户端资料！</value>
+  </data>
+  <data name="DeletaLocalFile" xml:space="preserve">
+    <value>您确定要删除本地所有资料并退出程式吗？这将删除所有已储存的客户端、储存的资料及所有配置文件！</value>
+  </data>
+  <data name="DeleteLocalFile2" xml:space="preserve">
+    <value>您真的确定要删除吗？此操作将无法恢复！请谨慎考虑后再点击「确定」。</value>
+  </data>
+  <data name="Desc" xml:space="preserve">
+    <value>简介</value>
+  </data>
+  <data name="FileError" xml:space="preserve">
+    <value>挡案错误！</value>
+  </data>
+  <data name="JsonFile" xml:space="preserve">
+    <value>json挡案</value>
+  </data>
+  <data name="LoadClientComplete" xml:space="preserve">
+    <value>读取客户端...完成</value>
+  </data>
+  <data name="LoadFileEmpty" xml:space="preserve">
+    <value>该档案没有任何一个斜杠指令!</value>
+  </data>
+  <data name="LoadFileError" xml:space="preserve">
+    <value>读取本地斜杠指令档案时发生错误!</value>
+  </data>
+  <data name="LoadFrom" xml:space="preserve">
+    <value>本地的斜杠指令:</value>
+  </data>
+  <data name="LoadingClient" xml:space="preserve">
+    <value>读取所有客户端中...</value>
+  </data>
+  <data name="LoadingCommands" xml:space="preserve">
+    <value>请耐心等候，正在读取客户端所有指令中...</value>
+  </data>
+  <data name="LoadingComplete" xml:space="preserve">
+    <value>读取完成!</value>
+  </data>
+  <data name="LocalizationConfig" xml:space="preserve">
+    <value>本地化设置</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Application ID与Client Secret是必须的！</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="NameEmpty" xml:space="preserve">
+    <value>名称不能为空或者只有空白!</value>
+  </data>
+  <data name="NameExist" xml:space="preserve">
+    <value>该名称已经存在!</value>
+  </data>
+  <data name="Nameillegal" xml:space="preserve">
+    <value>输入有不合法的字元！仅允许使用字母、数字和 - _</value>
+  </data>
+  <data name="Nameillegal2" xml:space="preserve">
+    <value>输入有不合法的字元！仅允许使用字母、数字和 - _ 还有其他语言字符(如中文、日文等)</value>
+  </data>
+  <data name="Nameillegal3" xml:space="preserve">
+    <value>输入有不符合规定的字元！仅允许使用数字!</value>
+  </data>
+  <data name="NetworkError" xml:space="preserve">
+    <value>网路错误!</value>
+  </data>
+  <data name="NoNetwork" xml:space="preserve">
+    <value>请检查你的网路连线! 并确保能连得上 discord.com，还是连不上的话建议使用梯子来使用本工具</value>
+  </data>
+  <data name="OpenJsonFile" xml:space="preserve">
+    <value>打开json挡案</value>
+  </data>
+  <data name="PushDuplicate1" xml:space="preserve">
+    <value>已有一个重复的名称存在：</value>
+  </data>
+  <data name="PushDuplicate2" xml:space="preserve">
+    <value>要取代掉该指令吗？</value>
+  </data>
+  <data name="PushFileEmpty" xml:space="preserve">
+    <value>没有任何一个指令可以推送!</value>
+  </data>
+  <data name="PushingCommands" xml:space="preserve">
+    <value>请耐心等候，正在推送指令到机器人中...</value>
+  </data>
+  <data name="ResetDone" xml:space="preserve">
+    <value>重置资料库成功！</value>
+  </data>
+  <data name="Saved" xml:space="preserve">
+    <value>存挡成功!</value>
+  </data>
+  <data name="SaveFail" xml:space="preserve">
+    <value>储存失败！可能是资料不合法或是网路断线！</value>
+  </data>
+  <data name="SaveFailLocal" xml:space="preserve">
+    <value>储存失败!</value>
+  </data>
+  <data name="SaveJsonFile" xml:space="preserve">
+    <value>储存json挡案</value>
+  </data>
+  <data name="SaveLocalUnavailable" xml:space="preserve">
+    <value>储存功能目前不可用！请先点击本地指令后再来储存！</value>
+  </data>
+  <data name="SaveOverwrite" xml:space="preserve">
+    <value>你要覆盖在原本的档案上吗? 若选否则会另存新档</value>
+  </data>
+  <data name="SlowDown1" xml:space="preserve">
+    <value>别急！你还有 </value>
+  </data>
+  <data name="SlowDown2" xml:space="preserve">
+    <value> 秒就可以再储存一次！</value>
+  </data>
+  <data name="ToBot" xml:space="preserve">
+    <value>← 到机器人</value>
+  </data>
+  <data name="ToLocal" xml:space="preserve">
+    <value>到本地  →</value>
+  </data>
+  <data name="VerityClientError" xml:space="preserve">
+    <value>检测到不可用的客户端！请击重试来重新连线，或者点击确认删除该客户端，否则该程式将会关闭！</value>
+  </data>
+  <data name="VerityError" xml:space="preserve">
+    <value>验证资料库失败!</value>
+  </data>
+  <data name="VerityError2" xml:space="preserve">
+    <value>请点击 "确定" 来重置资料库设定</value>
+  </data>
+  <data name="VerityError3" xml:space="preserve">
+    <value>否则该程序将会关闭</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告！</value>
+  </data>
+  <data name="WordLimit1" xml:space="preserve">
+    <value>超出字数限制！ 请限制在</value>
+  </data>
+  <data name="WordLimit2" xml:space="preserve">
+    <value>个字内</value>
+  </data>
+</root>

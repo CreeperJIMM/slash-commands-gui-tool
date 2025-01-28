@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AutoSaved" xml:space="preserve">
+    <value>Auto save successfully!</value>
+  </data>
+  <data name="AutoSync" xml:space="preserve">
+    <value>Auto Sync</value>
+  </data>
+  <data name="BackupNotEmpty" xml:space="preserve">
+    <value>A slash command is detected on the local side. If there is a duplicate name, the local command will be overwritten! Please click Confirm to continue.</value>
+  </data>
+  <data name="ChangeMsg" xml:space="preserve">
+    <value>You have unsaved changes! Selecting another command from the list will discard your modifications.  
+Do you want to save your changes before switching?</value>
+  </data>
+  <data name="ChoiceConfig" xml:space="preserve">
+    <value>Choice Config</value>
+  </data>
+  <data name="ClientError" xml:space="preserve">
+    <value>Client Error!</value>
+  </data>
+  <data name="ClientErrorMsg" xml:space="preserve">
+    <value>Please make sure the bot token is valid.</value>
+  </data>
+  <data name="ClientErrorMsg2" xml:space="preserve">
+    <value>The requested client ID does not match.</value>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Connecting...</value>
+  </data>
+  <data name="ConnectionSuccessful" xml:space="preserve">
+    <value>Connection Successful!</value>
+  </data>
+  <data name="DeleDatabase" xml:space="preserve">
+    <value>Are you sure you want to reset the database? This will delete all stored client data!</value>
+  </data>
+  <data name="DeletaLocalFile" xml:space="preserve">
+    <value>Are you sure you want to delete all local data and exit the program? This will erase all stored clients, saved data, and configuration files!</value>
+  </data>
+  <data name="DeleteLocalFile2" xml:space="preserve">
+    <value>Are you absolutely sure you want to delete this? This action is irreversible! Please think carefully before clicking "Confirm."</value>
+  </data>
+  <data name="Desc" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="FileError" xml:space="preserve">
+    <value>File error!</value>
+  </data>
+  <data name="JsonFile" xml:space="preserve">
+    <value>json File</value>
+  </data>
+  <data name="LoadClientComplete" xml:space="preserve">
+    <value>Loading client....Complete!</value>
+  </data>
+  <data name="LoadFileEmpty" xml:space="preserve">
+    <value>This file does not have any slash commands!</value>
+  </data>
+  <data name="LoadFileError" xml:space="preserve">
+    <value>Reading error form local slash command file!</value>
+  </data>
+  <data name="LoadFrom" xml:space="preserve">
+    <value>Slash Commands from:</value>
+  </data>
+  <data name="LoadingClient" xml:space="preserve">
+    <value>Loading clients...</value>
+  </data>
+  <data name="LoadingCommands" xml:space="preserve">
+    <value>Please wait, Loading all client commands...</value>
+  </data>
+  <data name="LoadingComplete" xml:space="preserve">
+    <value>Complete!</value>
+  </data>
+  <data name="LocalizationConfig" xml:space="preserve">
+    <value>Localization Config</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Application ID and Client Secret required!</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameEmpty" xml:space="preserve">
+    <value>The name cannot be empty or only spaces!</value>
+  </data>
+  <data name="NameExist" xml:space="preserve">
+    <value>Name already exists!</value>
+  </data>
+  <data name="Nameillegal" xml:space="preserve">
+    <value>The input contains invalid characters! Only letters,  numbers, and "-", "_" are allowed.</value>
+  </data>
+  <data name="Nameillegal2" xml:space="preserve">
+    <value>Input contains invalid characters! Only letters, numbers, "-", "_" and other language characters (such as Chinese, Japanese) are allowed.</value>
+  </data>
+  <data name="Nameillegal3" xml:space="preserve">
+    <value>The input contains invalid characters! Only numbers is allowed.</value>
+  </data>
+  <data name="NetworkError" xml:space="preserve">
+    <value>Network Error!</value>
+  </data>
+  <data name="NoNetwork" xml:space="preserve">
+    <value>Please check your Internet connection. Make sure you can connect to discord.com</value>
+  </data>
+  <data name="OpenJsonFile" xml:space="preserve">
+    <value>Open json file</value>
+  </data>
+  <data name="PushDuplicate1" xml:space="preserve">
+    <value>A duplicate name already exists:</value>
+  </data>
+  <data name="PushDuplicate2" xml:space="preserve">
+    <value>Do you want to replace this command?</value>
+  </data>
+  <data name="PushFileEmpty" xml:space="preserve">
+    <value>No command can be pushed.</value>
+  </data>
+  <data name="PushingCommands" xml:space="preserve">
+    <value>Please wait, Pushing all command to bot...</value>
+  </data>
+  <data name="ResetDone" xml:space="preserve">
+    <value>Reset database success!</value>
+  </data>
+  <data name="Saved" xml:space="preserve">
+    <value>Save successfully!</value>
+  </data>
+  <data name="SaveFail" xml:space="preserve">
+    <value>Save failed! Maybe the data is illegal or the network is disconnected.</value>
+  </data>
+  <data name="SaveFailLocal" xml:space="preserve">
+    <value>Save Failed!</value>
+  </data>
+  <data name="SaveJsonFile" xml:space="preserve">
+    <value>Save json file</value>
+  </data>
+  <data name="SaveLocalUnavailable" xml:space="preserve">
+    <value>The save is not available. Please click on the local command before using it.</value>
+  </data>
+  <data name="SaveOverwrite" xml:space="preserve">
+    <value>Do you want to overwrite the original file? If you choose No, a new file will be saved.</value>
+  </data>
+  <data name="SlowDown1" xml:space="preserve">
+    <value>Take it easy! You can save again in </value>
+  </data>
+  <data name="SlowDown2" xml:space="preserve">
+    <value>seconds.</value>
+  </data>
+  <data name="ToBot" xml:space="preserve">
+    <value>← To bot</value>
+  </data>
+  <data name="ToLocal" xml:space="preserve">
+    <value>To Local →</value>
+  </data>
+  <data name="VerityClientError" xml:space="preserve">
+    <value>An unavailable client has been detected! Click Retry to reconnect, or click Confirm to delete this client, otherwise the application will close.</value>
+  </data>
+  <data name="VerityError" xml:space="preserve">
+    <value>Failed to verify database!</value>
+  </data>
+  <data name="VerityError2" xml:space="preserve">
+    <value>Please click OK to reset the database.</value>
+  </data>
+  <data name="VerityError3" xml:space="preserve">
+    <value>Otherwise the application will be closed.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning!</value>
+  </data>
+  <data name="WordLimit1" xml:space="preserve">
+    <value>Exceeding the word limit, please limit to </value>
+  </data>
+  <data name="WordLimit2" xml:space="preserve">
+    <value>words</value>
+  </data>
+</root>
