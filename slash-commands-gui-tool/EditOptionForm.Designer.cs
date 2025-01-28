@@ -42,8 +42,8 @@
             // 
             // listBox1
             // 
-            listBox1.FormattingEnabled = true;
             resources.ApplyResources(listBox1, "listBox1");
+            listBox1.FormattingEnabled = true;
             listBox1.Name = "listBox1";
             // 
             // cmdtypeLabel
@@ -53,23 +53,23 @@
             // 
             // comboBox1
             // 
+            resources.ApplyResources(comboBox1, "comboBox1");
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            resources.ApplyResources(comboBox1, "comboBox1");
             comboBox1.Name = "comboBox1";
             // 
             // button1
             // 
-            button1.Image = Images.minus_button;
             resources.ApplyResources(button1, "button1");
+            button1.Image = Images.minus_button;
             button1.Name = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += deleteOption_click;
             // 
             // button2
             // 
-            button2.Image = Images.plus;
             resources.ApplyResources(button2, "button2");
+            button2.Image = Images.plus;
             button2.Name = "button2";
             button2.UseVisualStyleBackColor = true;
             button2.Click += addOption_click;
