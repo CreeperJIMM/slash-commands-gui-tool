@@ -24,8 +24,8 @@ This tool use discord api v10, support command type 1 to 11:
 SUB_COMMAND, SUB_COMMAND_GROUP, STRING, INTEGER , BOOLEAN, USER, CHANNEL ,ROLE , MENTIONABLE, NUMBER, ATTACHMENT
 
 ## Require
-[.NET 8.0 Desktop Runtime (v8.0.12)](https://dotnet.microsoft.com/zh-tw/download/dotnet/thank-you/runtime-desktop-8.0.12-windows-x64-installer?cid=getdotnetcore)
-Only support Windows.
+[.NET 8.0 Desktop Runtime (v8.0.12)](https://dotnet.microsoft.com/zh-tw/download/dotnet/thank-you/runtime-desktop-8.0.12-windows-x64-installer?cid=getdotnetcore) <br>
+The application can only run on Windows.
 
 ## How to use
 🤖On Bot eding:  First, click "Create client". After adding the client, you can start editing the slash commands.<br>
