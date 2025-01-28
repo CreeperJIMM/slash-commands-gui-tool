@@ -154,7 +154,7 @@
     <value>NoControl</value>
   </data>
   <data name="cmdtypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 325</value>
+    <value>12, 326</value>
   </data>
   <data name="cmdtypeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 25</value>
@@ -178,10 +178,10 @@
     <value>7</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 328</value>
+    <value>76, 328</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 23</value>
+    <value>200, 23</value>
   </data>
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>

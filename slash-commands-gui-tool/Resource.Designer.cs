@@ -70,7 +70,7 @@ namespace slash_commands_gui_tool {
         }
         
         /// <summary>
-        ///   查詢類似 Auto Sync 的當地語系化字串。
+        ///   查詢類似 Auto Save 的當地語系化字串。
         /// </summary>
         internal static string AutoSync {
             get {

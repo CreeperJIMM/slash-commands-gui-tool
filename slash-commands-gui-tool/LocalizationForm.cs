@@ -36,7 +36,7 @@ namespace slash_commands_gui_tool
                 if (choice.name_localizations == null) choice.name_localizations = new Dictionary<string, string>();
                 localization = choice.name_localizations;
                 this.Text = $"{Resource.Name} - {Resource.LocalizationConfig}";
-                UpdateData(e);
+                UpdateData(e, false);
                 return;
             }
             CommandOption? option = Form1.NowOption;
@@ -72,7 +72,7 @@ namespace slash_commands_gui_tool
                 }
                 this.Text = $"{Resource.Desc} - {Resource.LocalizationConfig}";
             }
-            UpdateData(e);
+            UpdateData(e, false);
         }
 
         private void Minus_Click(object? sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace slash_commands_gui_tool
             if (button == null || button.Tag == null) return;
             string locale = (string)button.Tag;
             localization.Remove(locale);
-            UpdateData(e);
+            UpdateData(e, false);
             Changed = true;
         }
 
@@ -92,7 +92,7 @@ namespace slash_commands_gui_tool
             Language lang = nowlang[index];
             if (lang.locale == null) return;
             localization.Add(lang.locale, "");
-            UpdateData(e);
+            UpdateData(e, true);
             Changed = true;
         }
 
@@ -119,7 +119,7 @@ namespace slash_commands_gui_tool
                     else Changed = false;
                 }
                 if (type == "name") {
-                    bool isValid = Regex.IsMatch(txt, @"^[a-z0-9_\p{L}-]+$");
+                    bool isValid = Regex.IsMatch(txt, @"^[a-zA-Z0-9_\p{L}-]+$");
                     if (!isValid) {
                         DialogResult dialog = MessageBox.Show($"{Resource.Nameillegal2}\n\nError: {locale}", Resource.Warning, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                         if (dialog == DialogResult.OK) {
@@ -153,7 +153,7 @@ namespace slash_commands_gui_tool
             else this.DialogResult = DialogResult.Cancel;
         }
 
-        private void UpdateData(EventArgs e)
+        private void UpdateData(EventArgs e, bool up)
         {
             Operation = false;
             GP[] gps = groups.ToArray();
@@ -177,8 +177,8 @@ namespace slash_commands_gui_tool
             
             comboBox1.Location = new Point(23, offset + 30 + (index * 120));
             button1.Location = new Point(285, offset + 12 + (index * 120));
-            if(!FormHelper.UpHasSpace(this, e, 120))
-                if(!FormHelper.IsReachBottom(this, e, 120))
+            if (!FormHelper.UpHasSpace(this, e, up, 120))
+                if (!FormHelper.IsReachBottom(this, e, 120))
                     this.Size = new Size(400, (index + 1) * 120);
                 else
                     AutoScrollPosition = new Point(0, VerticalScroll.Maximum);

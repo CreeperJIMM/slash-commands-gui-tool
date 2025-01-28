@@ -33,7 +33,7 @@ namespace slash_commands_gui_tool
             this.Text = $"{Resource.ChoiceConfig} - {Form1.types[type - 1].name}";
             if (option.choices == null) option.choices = new List<CommandOptionChoice>();
             choices = option.choices;
-            UpdateData(e);
+            UpdateData(e, false);
         }
 
         private void Minus_Click(object? sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace slash_commands_gui_tool
             CommandOptionChoice? choice = choices.FirstOrDefault(c => c.name == name);
             if (choice == null) return;
             choices.Remove(choice);
-            UpdateData(e);
+            UpdateData(e, false);
             Changed = true;
         }
 
@@ -59,7 +59,7 @@ namespace slash_commands_gui_tool
             DialogResult result = form.ShowDialog();
             if (result == DialogResult.OK) {
                 Changed = true;
-                UpdateData(e);
+                UpdateData(e, false);
             }
             LocalizationEdit = null;
         }
@@ -75,7 +75,7 @@ namespace slash_commands_gui_tool
                 MessageBox.Show($"{Resource.WordLimit1} 1~32 {Resource.WordLimit2}", Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            bool isValid = Regex.IsMatch(txt, @"^[a-z0-9_-]+$");
+            bool isValid = Regex.IsMatch(txt, @"^[a-zA-Z0-9_-]+$");
             if (!isValid) {
                 MessageBox.Show(Resource.Nameillegal, Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -95,7 +95,7 @@ namespace slash_commands_gui_tool
             }
             textBox1.Text = string.Empty;
             choices.Add(choice);
-            UpdateData(e);
+            UpdateData(e, true);
             Changed = true;
         }
         
@@ -152,7 +152,7 @@ namespace slash_commands_gui_tool
                 return MessageBox.Show($"{Resource.WordLimit1}100{Resource.WordLimit2}", Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (type == 3) {
-                bool isValid = Regex.IsMatch(txt, @"^[a-z0-9_-]+$");
+                bool isValid = Regex.IsMatch(txt, @"^[a-zA-Z0-9_-]+$");
                 if (!isValid) {
                     return MessageBox.Show(Resource.Nameillegal, Resource.Warning, btn, MessageBoxIcon.Warning);
                 }
@@ -171,7 +171,7 @@ namespace slash_commands_gui_tool
             }
             return DialogResult.None;
         }
-        private void UpdateData(EventArgs e)
+        private void UpdateData(EventArgs e, bool up)
         {
             Operation = false;
             GP[] gps = groups.ToArray();
@@ -179,6 +179,7 @@ namespace slash_commands_gui_tool
                 this.Controls.Remove(gp.Label);
                 this.Controls.Remove(gp.Button);
                 this.Controls.Remove(gp.TextBox);
+                this.Controls.Remove(gp.Localbutton);
             }
             groups.Clear();
             int index = 0;
@@ -191,7 +192,7 @@ namespace slash_commands_gui_tool
             label1.Location = new Point(23, offset + 10 + (index * 120));
             textBox1.Location = new Point(23, offset + 30 + (index * 120));
             button1.Location = new Point(285, offset + 12 + (index * 120));
-            if (!FormHelper.UpHasSpace(this, e, 120))
+            if (!FormHelper.UpHasSpace(this, e, up, 120))
                 if (!FormHelper.IsReachBottom(this, e, 120))
                     this.Size = new Size(400, (index + 1) * 120);
                 else

@@ -73,6 +73,7 @@
             cmdtypeLabel = new Label();
             comboBox1 = new ComboBox();
             groupBox6 = new GroupBox();
+            checkBox3 = new CheckBox();
             editchoiceButton = new Button();
             checkBox2 = new CheckBox();
             checkBox1 = new CheckBox();
@@ -437,12 +438,21 @@
             // 
             // groupBox6
             // 
+            groupBox6.Controls.Add(checkBox3);
             groupBox6.Controls.Add(editchoiceButton);
             groupBox6.Controls.Add(checkBox2);
             groupBox6.Controls.Add(checkBox1);
             resources.ApplyResources(groupBox6, "groupBox6");
             groupBox6.Name = "groupBox6";
             groupBox6.TabStop = false;
+            // 
+            // checkBox3
+            // 
+            resources.ApplyResources(checkBox3, "checkBox3");
+            checkBox3.Name = "checkBox3";
+            checkBox3.Tag = "nsfw";
+            checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.Click += checkBox_Click;
             // 
             // editchoiceButton
             // 
@@ -704,5 +714,6 @@
         private Button editchoiceButton;
         private ToolStripMenuItem localCommandSaveFolderToolStripMenuItem;
         private ToolStripMenuItem aboutIToolStripMenuItem;
+        private CheckBox checkBox3;
     }
 }

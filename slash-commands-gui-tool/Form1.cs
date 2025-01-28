@@ -198,8 +198,9 @@ namespace slash_commands_gui_tool
             }
             if (slash == null) return null;
             BotCache.Add(slash);
+            pathIndex.Clear();
             UpdateCommand(slash);
-
+            checkBox3.Visible = true;
             return slash;
         }
         private void UpdateCommand(SlashCommand slash)
@@ -210,14 +211,13 @@ namespace slash_commands_gui_tool
             label.Text = $"/{slash.name}";
             label.Location = new Point(3, 10);
             label.Font = new Font("Arial", 12);
-            pathIndex.Clear();
             groupBox5.Controls.Add(label);
-            groupBox6.Visible = false;
             backbutton.Enabled = false;
             addoptionButton.Enabled = true;
             cmdnameTextbox.Text = lastname = slash.name;
             cmdnameTextbox.ReadOnly = true;
             cmddescTextbox.Text = lastdesc = slash.description;
+            if (slash.nsfw != null) checkBox3.Checked = (bool)slash.nsfw;
             listBox3.Items.Clear();
             if (slash.options != null && slash.options.Count > 0) {
                 slash.options = slash.options.OrderBy(item => item.name).OrderBy(item => item.type).ToList();
@@ -414,24 +414,31 @@ namespace slash_commands_gui_tool
                 minusbutton1.Enabled = true;
                 groupBox3.Visible = true;
                 groupBox3.Enabled = false;
-                groupBox6.Visible = false;
+                groupBox6.Visible = true;
+                checkBox1.Visible = false;
+                checkBox2.Visible = false;
+                checkBox3.Visible = true;
+                editchoiceButton.Visible = false;
                 label1.Visible = false;
                 Changed = false;
                 SelectIndex = listBox.SelectedIndex;
+                NowFloor = 0;
+                NowOption = null;
+                groupBox3.Enabled = true;
                 if (Status) {
                     if (BotSlash == null) return;
                     SimpleSlash simple = BotSlash[SelectIndex];
                     SlashCommand? slash = await LoadSingleCommandAsync(simple);
                     NowSlash = slash;
+                    pathIndex.Clear();
                 }
                 else {
                     SlashCommand slash = LocalCache[SelectIndex];
                     NowSlash = slash;
+                    pathIndex.Clear();
                     UpdateCommand(slash);
                 }
-                NowOption = null;
-                NowFloor = 0;
-                groupBox3.Enabled = true;
+
             }
             else {
                 NowSlash = null;
@@ -439,7 +446,6 @@ namespace slash_commands_gui_tool
                 minusbutton1.Enabled = false;
                 groupBox3.Visible = false;
                 groupBox6.Visible = false;
-
             }
             groupBox4.Enabled = true;
             label1.Visible = true;
@@ -488,6 +494,15 @@ namespace slash_commands_gui_tool
             NowFloor++;
             int[] path = pathIndex.ToArray();
             int index = listBox3.SelectedIndex;
+            checkBox3.Visible = false;
+            if (NowOption != null) {
+                if (NowOption.type != 1 && NowOption.type != 2) {
+                    checkBox1.Visible = true;
+                    checkBox2.Visible = true;
+                    editchoiceButton.Visible = true;
+                    groupBox6.Visible = true;
+                }
+            }
             for (int i = 0; i < NowFloor; i++) {
                 if (NowOption == null) {
                     if (NowSlash.options == null) return;
@@ -510,7 +525,6 @@ namespace slash_commands_gui_tool
                     x += UpdateOption(NowOption, x, i);
                 }
             }
-            groupBox6.Visible = true;
             backbutton.Enabled = true;
             Operation = true;
         }
@@ -688,9 +702,14 @@ namespace slash_commands_gui_tool
         private void checkBox_Click(object sender, EventArgs e)
         {
             if (!Operation) return;
-            if (NowOption == null) return;
+            if (NowSlash == null) return;
             CheckBox? checkBox = sender as CheckBox;
             if (checkBox == null || checkBox.Tag == null) return;
+            if ((string)checkBox.Tag == "nsfw") {
+                NowSlash.nsfw = checkBox.Checked;
+                Changed = true;
+            }
+            if (NowOption == null) return;
             if ((string)checkBox.Tag == "required") {
                 NowOption.required = checkBox.Checked;
                 Changed = true;

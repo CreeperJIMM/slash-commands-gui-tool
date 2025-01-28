@@ -121,7 +121,7 @@
     <value>Auto save successfully!</value>
   </data>
   <data name="AutoSync" xml:space="preserve">
-    <value>Auto Sync</value>
+    <value>Auto Save</value>
   </data>
   <data name="BackupNotEmpty" xml:space="preserve">
     <value>A slash command is detected on the local side. If there is a duplicate name, the local command will be overwritten! Please click Confirm to continue.</value>

@@ -148,6 +148,21 @@
   <data name="label2.Text" xml:space="preserve">
     <value>添加新选项:</value>
   </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 444</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 105</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>规则:
+1.  同层的选项中不可同时存在子指令与参数指令
+ 你必须只能择一使用！
+
+2.   除了最顶层可以使用子指令、群组子指令、
+ 参数指令以外，其余子指令(类型1)后面只能
+ 使用参数指令！</value>
+  </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 361</value>
   </data>

@@ -15,14 +15,14 @@
             else
                 return false;
         }
-        public static bool UpHasSpace(Form form, EventArgs e, int limit = 0)
+        public static bool UpHasSpace(Form form, EventArgs e, bool up, int limit = 0)
         {
             int windowHeight = form.Bounds.Height;
             int windowTop = form.Bounds.Top;
             Screen currentScreen = Screen.FromControl(form);
             int screenTop = currentScreen.WorkingArea.Top;
             // 檢查是否有足夠空間往上移動並加長高度
-            if (windowTop > screenTop) {
+            if (windowTop > screenTop && up) {
                 int availableSpace = windowTop - screenTop;
                 int extendHeight = Math.Min(availableSpace, limit);
                 form.SetBounds(form.Bounds.X, form.Bounds.Y - extendHeight, form.Bounds.Width, windowHeight + extendHeight);

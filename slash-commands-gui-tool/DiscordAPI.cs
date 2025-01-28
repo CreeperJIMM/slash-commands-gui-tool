@@ -206,9 +206,9 @@ namespace DiscordAPI
         public Dictionary<string, string>? name_localizations { get; set; }
         public string? description { get; set; }
         public Dictionary<string, string>? description_localizations { get; set; }
-        public bool? dm_permission { get; set; }
+        public string? default_member_permissions { get; set; }
         public List<CommandOption>? options { get; set; }
-        public bool? Nsfw { get; set; }
+        public bool? nsfw { get; set; }
         public static T? Clone<T>(T source)
         {
             var serialized = JsonConvert.SerializeObject(source);
