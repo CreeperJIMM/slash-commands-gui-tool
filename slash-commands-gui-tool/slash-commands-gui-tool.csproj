@@ -8,9 +8,17 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <StartupObject>slash_commands_gui_tool.Program</StartupObject>
+    <Platforms>AnyCPU;ARM64</Platforms>
+	<GenerateSatelliteAssembliesForCore>true</GenerateSatelliteAssembliesForCore>
+	<PackageIcon></PackageIcon>
+	<ApplicationIcon>$this.Icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <DebugType>full</DebugType>
   </PropertyGroup>
 
@@ -18,10 +26,18 @@
     <DebugType>full</DebugType>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Images\**" />
     <EmbeddedResource Remove="Images\**" />
     <None Remove="Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="$this.Icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
