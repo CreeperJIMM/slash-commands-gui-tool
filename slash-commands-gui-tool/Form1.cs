@@ -25,6 +25,7 @@ namespace slash_commands_gui_tool
         public static int NowFloor;              //當前選項層數
         public static bool Status;               //操作狀態(1線上/0本地)
         public static string USER_LANGUAGE = "en-US";
+        public float scale = 100f;
         public static void CreateDatabase()
         {
             if (sql.CreateDatabase()) {
@@ -35,6 +36,7 @@ namespace slash_commands_gui_tool
         public Form1()
         {
             theme.SetTheme(this);
+            scale = this.DeviceDpi / 96f;
             ChangeLanguage(USER_LANGUAGE);
             InitializeComponent();
         }
@@ -209,7 +211,7 @@ namespace slash_commands_gui_tool
             LinkLabel label = new LinkLabel();
             label.AutoSize = true;
             label.Text = $"/{slash.name}";
-            label.Location = new Point(3, 10);
+            label.Location = new Point(3, (int)(10 * scale));
             label.Font = new Font("Arial", 12);
             groupBox5.Controls.Add(label);
             backbutton.Enabled = false;
@@ -473,7 +475,7 @@ namespace slash_commands_gui_tool
             label.AutoSize = true;
             if (NowSlash == null) return;
             label.Text = $"/{NowSlash.name}";
-            label.Location = new Point(3, 10);
+            label.Location = new Point(3, (int)(10 * scale));
             label.Font = new Font("Arial", 12);
             label.Tag = 0;
             label.Click += Link_Click;
@@ -604,7 +606,7 @@ namespace slash_commands_gui_tool
             LinkLabel label = new LinkLabel();
             label.AutoSize = true;
             label.Text = $"/{option.name}";
-            label.Location = new Point(x, 10);
+            label.Location = new Point(x, (int)(10 * scale));
             label.Font = new Font("Arial", 12);
             label.Tag = index + 1;
             label.Click += Link_Click;

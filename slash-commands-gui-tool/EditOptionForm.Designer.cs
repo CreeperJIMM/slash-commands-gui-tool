@@ -102,7 +102,7 @@
             // EditOptionForm
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Dpi;
             Controls.Add(textBox1);
             Controls.Add(label4);
             Controls.Add(label3);

@@ -12,6 +12,7 @@ namespace slash_commands_gui_tool
             theme.SetTheme(this);
             Form1.ChangeLanguage(Form1.USER_LANGUAGE);
             InitializeComponent();
+            scale = this.DeviceDpi / 96f;
             this.AutoScroll = true;
             this.HorizontalScroll.Enabled = false;
             this.HorizontalScroll.Visible = false;
@@ -20,6 +21,7 @@ namespace slash_commands_gui_tool
         public Dictionary<string, string> localization = new Dictionary<string, string>();
         public bool Changed = false;
         bool Operation = false;
+        float scale = 100f;
         string? type;
         List<Language> nowlang = new List<Language>();
         private void LocalizationForm_Load(object sender, EventArgs e)
@@ -175,15 +177,15 @@ namespace slash_commands_gui_tool
             }
             int offset = AutoScrollPosition.Y;
             
-            comboBox1.Location = new Point(23, offset + 30 + (index * 120));
-            button1.Location = new Point(285, offset + 12 + (index * 120));
+            comboBox1.Location = new Point(comboBox1.Location.X, offset + 30 + (index * 120));
+            button1.Location = new Point(button1.Location.X, offset + 12 + (index * 120));
             if (!FormHelper.UpHasSpace(this, e, up, 120))
                 if (!FormHelper.IsReachBottom(this, e, 120))
-                    this.Size = new Size(400, (index + 1) * 120);
+                    this.Size = new Size(this.Width, (index + 1) * 120);
                 else
                     AutoScrollPosition = new Point(0, VerticalScroll.Maximum);
             else
-                this.Size = new Size(400, (index + 1) * 120);
+                this.Size = new Size(this.Width, (index + 1) * 120);
             UpdateComboBox();
             Operation = true;
         }
@@ -199,7 +201,7 @@ namespace slash_commands_gui_tool
 
             RichTextBox textBox = new RichTextBox();
             textBox.BorderStyle = BorderStyle.Fixed3D;
-            textBox.Size = new Size(340, 80);
+            textBox.Size = new Size(this.Size.Width - (50 * (int)scale), 80);
             textBox.Text = txt;
             textBox.Margin = new Padding(0);
             textBox.TextChanged += TextBox_TextChanged;
@@ -210,7 +212,7 @@ namespace slash_commands_gui_tool
             button.FlatStyle = FlatStyle.Flat;
             button.Text = "-";
             button.Size = new Size(25, 25);
-            button.Location = new Point(328, offset + 5 + (120 * index));
+            button.Location = new Point(this.Size.Width - (60 * (int)scale), offset + 5 + (120 * index));
             button.Margin = new Padding(0);
             button.Click += Minus_Click;
             button.Tag = lang.locale;

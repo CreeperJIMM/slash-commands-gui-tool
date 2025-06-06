@@ -122,28 +122,28 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="toolStripComboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 23</value>
+    <value>285, 34</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 22</value>
+    <value>315, 40</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>Enable (&amp;E)</value>
   </data>
   <data name="disableDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 22</value>
+    <value>315, 40</value>
   </data>
   <data name="disableDToolStripMenuItem.Text" xml:space="preserve">
     <value>Disable (&amp;D)</value>
   </data>
   <data name="AutoSyncStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 23</value>
+    <value>189, 34</value>
   </data>
   <data name="AutoSyncStripMenuItem.Text" xml:space="preserve">
-    <value>✅ Auto Save (&amp;A)</value>
+    <value>✅ Auto Save (&amp;S)</value>
   </data>
   <data name="newClientToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 23</value>
+    <value>194, 34</value>
   </data>
   <data name="newClientToolStripMenuItem.Text" xml:space="preserve">
     <value>Create Client (&amp;N)</value>
@@ -152,103 +152,103 @@
     <value>N</value>
   </data>
   <data name="backupBotToLocalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 22</value>
+    <value>457, 40</value>
   </data>
   <data name="backupBotToLocalToolStripMenuItem.Text" xml:space="preserve">
     <value>Clone Bot Commands to Local (&amp;B)</value>
   </data>
   <data name="copyAllLocalToBotToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 22</value>
+    <value>457, 40</value>
   </data>
   <data name="copyAllLocalToBotToolStripMenuItem.Text" xml:space="preserve">
     <value>Push Local Commands to Bot (&amp;P)</value>
   </data>
   <data name="localCommandSaveFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 22</value>
+    <value>457, 40</value>
   </data>
   <data name="localCommandSaveFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Local Command Folder (&amp;S)</value>
   </data>
   <data name="oToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 23</value>
+    <value>253, 34</value>
   </data>
   <data name="oToolStripMenuItem.Text" xml:space="preserve">
     <value>Command Manage (&amp;C)</value>
   </data>
   <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>357, 40</value>
   </data>
   <data name="englishToolStripMenuItem.Text" xml:space="preserve">
     <value>English(US)                 [&amp;E]</value>
   </data>
   <data name="chinese繁體中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>357, 40</value>
   </data>
   <data name="chinese繁體中文ToolStripMenuItem.Text" xml:space="preserve">
     <value>Chinese(繁體中文)     [&amp;T]</value>
   </data>
   <data name="chinese簡體中文SToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>357, 40</value>
   </data>
   <data name="chinese簡體中文SToolStripMenuItem.Text" xml:space="preserve">
     <value>Chinese(简体中文)     [&amp;S]</value>
   </data>
   <data name="languagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 22</value>
+    <value>341, 40</value>
   </data>
   <data name="languagesToolStripMenuItem.Text" xml:space="preserve">
     <value>UI Languages(&amp;L)</value>
   </data>
   <data name="systemSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
+    <value>300, 40</value>
   </data>
   <data name="systemSToolStripMenuItem.Text" xml:space="preserve">
     <value>Follow System (&amp;S)</value>
   </data>
   <data name="whiteWToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
+    <value>300, 40</value>
   </data>
   <data name="whiteWToolStripMenuItem.Text" xml:space="preserve">
     <value>White (&amp;W)</value>
   </data>
   <data name="darkDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
+    <value>300, 40</value>
   </data>
   <data name="darkDToolStripMenuItem.Text" xml:space="preserve">
     <value>Dark (&amp;D)</value>
   </data>
   <data name="uIThemeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 22</value>
+    <value>341, 40</value>
   </data>
   <data name="uIThemeToolStripMenuItem.Text" xml:space="preserve">
     <value>UI Theme (&amp;T)</value>
   </data>
   <data name="resetAppliToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 22</value>
+    <value>374, 40</value>
   </data>
   <data name="resetAppliToolStripMenuItem.Text" xml:space="preserve">
     <value>Reset Database</value>
   </data>
   <data name="clearApplicationsAndCloseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 22</value>
+    <value>374, 40</value>
   </data>
   <data name="clearApplicationsAndCloseToolStripMenuItem.Text" xml:space="preserve">
     <value>Purge Local Files and Exit</value>
   </data>
   <data name="othersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 22</value>
+    <value>341, 40</value>
   </data>
   <data name="othersToolStripMenuItem.Text" xml:space="preserve">
     <value>Advanced Actions (&amp;A)</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 23</value>
+    <value>142, 34</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Settings(&amp;S)</value>
+    <value>Settings(&amp;O)</value>
   </data>
   <data name="aboutIToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 23</value>
+    <value>126, 34</value>
   </data>
   <data name="aboutIToolStripMenuItem.Text" xml:space="preserve">
     <value>About (&amp;A)</value>
@@ -256,8 +256,12 @@
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 3, 0, 3</value>
+  </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 27</value>
+    <value>1344, 40</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -286,10 +290,13 @@
     <value>Flat</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 28</value>
+    <value>12, 49</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 31</value>
+    <value>149, 54</value>
   </data>
   <data name="button1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -310,16 +317,19 @@
     <value>6</value>
   </data>
   <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>26</value>
   </data>
   <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 115</value>
+    <value>9, 199</value>
+  </data>
+  <data name="listBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="listBox1.ScrollAlwaysVisible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 454</value>
+    <value>259, 784</value>
   </data>
   <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -343,10 +353,13 @@
     <value>Microsoft JhengHei UI, 15pt</value>
   </data>
   <data name="plusbutton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 75</value>
+    <value>173, 130</value>
+  </data>
+  <data name="plusbutton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="plusbutton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 37</value>
+    <value>103, 64</value>
   </data>
   <data name="plusbutton2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -376,10 +389,13 @@
     <value>NoControl</value>
   </data>
   <data name="minusbutton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 75</value>
+    <value>10, 130</value>
+  </data>
+  <data name="minusbutton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="minusbutton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 37</value>
+    <value>103, 64</value>
   </data>
   <data name="minusbutton2.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -406,10 +422,13 @@
     <value>NoControl</value>
   </data>
   <data name="savebutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 31</value>
+    <value>173, 54</value>
+  </data>
+  <data name="savebutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="savebutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 39</value>
+    <value>103, 68</value>
   </data>
   <data name="savebutton.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -430,16 +449,19 @@
     <value>0</value>
   </data>
   <data name="listBox2.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>26</value>
   </data>
   <data name="listBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 150</value>
+    <value>10, 260</value>
+  </data>
+  <data name="listBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="listBox2.ScrollAlwaysVisible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="listBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 454</value>
+    <value>259, 784</value>
   </data>
   <data name="listBox2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -460,10 +482,13 @@
     <value>Microsoft JhengHei UI, 12pt</value>
   </data>
   <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 117</value>
+    <value>10, 203</value>
+  </data>
+  <data name="textBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 28</value>
+    <value>263, 43</value>
   </data>
   <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -487,10 +512,13 @@
     <value>NoControl</value>
   </data>
   <data name="loadbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 31</value>
+    <value>10, 54</value>
+  </data>
+  <data name="loadbutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="loadbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 39</value>
+    <value>103, 68</value>
   </data>
   <data name="loadbutton.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -511,10 +539,16 @@
     <value>3</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 27</value>
+    <value>1051, 47</value>
+  </data>
+  <data name="groupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="groupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 612</value>
+    <value>285, 1061</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -538,10 +572,13 @@
     <value>False</value>
   </data>
   <data name="backbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 21</value>
+    <value>10, 36</value>
+  </data>
+  <data name="backbutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="backbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 32</value>
+    <value>65, 55</value>
   </data>
   <data name="backbutton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -562,10 +599,13 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
+    <value>10, 28</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 15</value>
+    <value>182, 26</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -589,10 +629,13 @@
     <value>Microsoft JhengHei UI, 12pt</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 81</value>
+    <value>9, 140</value>
+  </data>
+  <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 28</value>
+    <value>263, 43</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -619,10 +662,13 @@
     <value>NoControl</value>
   </data>
   <data name="minusbutton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 36</value>
+    <value>10, 62</value>
+  </data>
+  <data name="minusbutton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="minusbutton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 39</value>
+    <value>103, 68</value>
   </data>
   <data name="minusbutton1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -652,10 +698,13 @@
     <value>NoControl</value>
   </data>
   <data name="plusbutton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 36</value>
+    <value>168, 62</value>
+  </data>
+  <data name="plusbutton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="plusbutton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 39</value>
+    <value>103, 68</value>
   </data>
   <data name="plusbutton1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -682,10 +731,16 @@
     <value>Microsoft JhengHei UI, 9pt</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 64</value>
+    <value>5, 111</value>
+  </data>
+  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 575</value>
+    <value>295, 997</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -715,10 +770,13 @@
     <value>NoControl</value>
   </data>
   <data name="updateButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>251, 500</value>
+    <value>430, 867</value>
+  </data>
+  <data name="updateButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="updateButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 36</value>
+    <value>293, 62</value>
   </data>
   <data name="updateButton.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -748,10 +806,13 @@
     <value>MiddleLeft</value>
   </data>
   <data name="addoptionButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 79</value>
+    <value>10, 137</value>
+  </data>
+  <data name="addoptionButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="addoptionButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 38</value>
+    <value>214, 66</value>
   </data>
   <data name="addoptionButton.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -781,10 +842,13 @@
     <value>Microsoft JhengHei UI, 15pt, style=Bold</value>
   </data>
   <data name="cmdtypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 233</value>
+    <value>238, 404</value>
+  </data>
+  <data name="cmdtypeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="cmdtypeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 25</value>
+    <value>111, 44</value>
   </data>
   <data name="cmdtypeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -808,10 +872,13 @@
     <value>Microsoft JhengHei UI, 10pt</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 233</value>
+    <value>353, 404</value>
+  </data>
+  <data name="comboBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 25</value>
+    <value>369, 37</value>
   </data>
   <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -838,10 +905,13 @@
     <value>Alpha</value>
   </data>
   <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 42</value>
+    <value>29, 73</value>
+  </data>
+  <data name="checkBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 28</value>
+    <value>140, 46</value>
   </data>
   <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -871,10 +941,13 @@
     <value>Alpha</value>
   </data>
   <data name="editchoiceButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 165</value>
+    <value>19, 286</value>
+  </data>
+  <data name="editchoiceButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="editchoiceButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 54</value>
+    <value>262, 94</value>
   </data>
   <data name="editchoiceButton.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -907,10 +980,13 @@
     <value>Alpha</value>
   </data>
   <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 123</value>
+    <value>29, 213</value>
+  </data>
+  <data name="checkBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 28</value>
+    <value>268, 46</value>
   </data>
   <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -937,10 +1013,13 @@
     <value>Microsoft JhengHei UI, 14pt</value>
   </data>
   <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 82</value>
+    <value>29, 142</value>
+  </data>
+  <data name="checkBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 28</value>
+    <value>304, 46</value>
   </data>
   <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -964,10 +1043,16 @@
     <value>Microsoft JhengHei UI, 14pt, style=Bold</value>
   </data>
   <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 267</value>
+    <value>235, 463</value>
+  </data>
+  <data name="groupBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="groupBox6.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 232</value>
+    <value>489, 402</value>
   </data>
   <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -991,10 +1076,13 @@
     <value>Flat</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 502</value>
+    <value>10, 870</value>
+  </data>
+  <data name="button4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 34</value>
+    <value>214, 59</value>
   </data>
   <data name="button4.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1021,10 +1109,13 @@
     <value>Microsoft JhengHei UI, 12pt</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 10</value>
+    <value>5, 17</value>
+  </data>
+  <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>16, 20</value>
+    <value>27, 36</value>
   </data>
   <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1045,10 +1136,16 @@
     <value>0</value>
   </data>
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 18</value>
+    <value>77, 31</value>
+  </data>
+  <data name="groupBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="groupBox5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>378, 33</value>
+    <value>648, 57</value>
   </data>
   <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1066,10 +1163,13 @@
     <value>7</value>
   </data>
   <data name="localizationButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>393, 118</value>
+    <value>674, 205</value>
+  </data>
+  <data name="localizationButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="localizationButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 28</value>
+    <value>51, 49</value>
   </data>
   <data name="localizationButton2.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1087,10 +1187,13 @@
     <value>8</value>
   </data>
   <data name="localizationButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>393, 57</value>
+    <value>674, 99</value>
+  </data>
+  <data name="localizationButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="localizationButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 28</value>
+    <value>51, 49</value>
   </data>
   <data name="localizationButton1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1114,10 +1217,13 @@
     <value>Microsoft JhengHei UI, 15pt, style=Bold</value>
   </data>
   <data name="cmdoptionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 53</value>
+    <value>5, 92</value>
+  </data>
+  <data name="cmdoptionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="cmdoptionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 25</value>
+    <value>164, 44</value>
   </data>
   <data name="cmdoptionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1141,13 +1247,16 @@
     <value>Microsoft JhengHei UI, 10pt</value>
   </data>
   <data name="cmddescTextbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 147</value>
+    <value>237, 255</value>
+  </data>
+  <data name="cmddescTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="cmddescTextbox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="cmddescTextbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 75</value>
+    <value>486, 127</value>
   </data>
   <data name="cmddescTextbox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1171,10 +1280,13 @@
     <value>Microsoft JhengHei UI, 15pt, style=Bold</value>
   </data>
   <data name="cmddescLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 119</value>
+    <value>235, 206</value>
+  </data>
+  <data name="cmddescLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="cmddescLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 25</value>
+    <value>224, 44</value>
   </data>
   <data name="cmddescLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1198,10 +1310,13 @@
     <value>Microsoft JhengHei UI, 10pt</value>
   </data>
   <data name="cmdnameTextbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 86</value>
+    <value>358, 149</value>
+  </data>
+  <data name="cmdnameTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="cmdnameTextbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 24</value>
+    <value>364, 37</value>
   </data>
   <data name="cmdnameTextbox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1225,10 +1340,13 @@
     <value>Microsoft JhengHei UI, 15pt, style=Bold</value>
   </data>
   <data name="cmdnameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 86</value>
+    <value>235, 149</value>
+  </data>
+  <data name="cmdnameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="cmdnameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 25</value>
+    <value>130, 44</value>
   </data>
   <data name="cmdnameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1249,13 +1367,16 @@
     <value>14</value>
   </data>
   <data name="listBox3.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>26</value>
   </data>
   <data name="listBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 120</value>
+    <value>10, 208</value>
+  </data>
+  <data name="listBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="listBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 379</value>
+    <value>211, 654</value>
   </data>
   <data name="listBox3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1276,10 +1397,16 @@
     <value>Microsoft JhengHei UI, 9pt</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 98</value>
+    <value>307, 170</value>
+  </data>
+  <data name="groupBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="groupBox3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 541</value>
+    <value>734, 938</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1309,10 +1436,13 @@
     <value>Microsoft JhengHei UI, 15pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>251, 31</value>
+    <value>430, 54</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 25</value>
+    <value>0, 44</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1333,10 +1463,13 @@
     <value>0</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 21</value>
+    <value>10, 36</value>
+  </data>
+  <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 43</value>
+    <value>243, 75</value>
   </data>
   <data name="button2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1363,10 +1496,16 @@
     <value>Microsoft JhengHei UI, 9pt</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 27</value>
+    <value>307, 47</value>
+  </data>
+  <data name="groupBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="groupBox4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 69</value>
+    <value>734, 120</value>
   </data>
   <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1390,22 +1529,25 @@
     <value>136, 17</value>
   </metadata>
   <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 17</value>
+    <value>21, 26</value>
   </data>
   <data name="toolStripStatusLabel1.Text" xml:space="preserve">
     <value>-</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>655, 17</value>
+    <value>1104, 26</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
+    <value>171, 25</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 639</value>
+    <value>0, 1112</value>
+  </data>
+  <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 41, 0</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 22</value>
+    <value>1344, 35</value>
   </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1429,10 +1571,13 @@
     <value>Alpha</value>
   </data>
   <data name="reloadButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 28</value>
+    <value>173, 49</value>
+  </data>
+  <data name="reloadButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
   </data>
   <data name="reloadButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 31</value>
+    <value>127, 54</value>
   </data>
   <data name="reloadButton.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1455,14 +1600,14 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+    <value>12, 26</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 661</value>
+    <value>1344, 1147</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2598,6 +2743,9 @@
   </data>
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Alpha</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>9, 9, 9, 9</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

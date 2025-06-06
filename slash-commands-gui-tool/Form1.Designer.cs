@@ -108,6 +108,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.ImageScalingSize = new Size(28, 28);
             menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripComboBox1, AutoSyncStripMenuItem, newClientToolStripMenuItem, oToolStripMenuItem, settingsToolStripMenuItem, aboutIToolStripMenuItem });
             resources.ApplyResources(menuStrip1, "menuStrip1");
             menuStrip1.Name = "menuStrip1";
@@ -576,6 +577,7 @@
             // 
             // statusStrip1
             // 
+            statusStrip1.ImageScalingSize = new Size(28, 28);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripProgressBar1 });
             resources.ApplyResources(statusStrip1, "statusStrip1");
             statusStrip1.Name = "statusStrip1";

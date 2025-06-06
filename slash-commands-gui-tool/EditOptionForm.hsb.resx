@@ -118,69 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cmdtypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 556</value>
-  </data>
-  <data name="cmdtypeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 44</value>
-  </data>
-  <data name="cmdtypeLabel.Text" xml:space="preserve">
-    <value>類型:</value>
-  </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 562</value>
-  </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 34</value>
-  </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 875</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 27</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>刪除已選中的選項</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 30</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>添加新選項:</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 668</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 182</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>規則:
-1.  同層的選項中不可同時存在子指令與參數指令
-      你必須只能擇一使用！
-
-2.   除了最頂層可以使用子指令、群組子指令、
-       參數指令以外，其餘子指令(類型1)後面只能
-       使用參數指令！</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 605</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 44</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>名稱:</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 612</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 34</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAMMOAADDDgAAAAAAAAAA
@@ -256,8 +193,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAIAAAAGAAAABwAAAA/AAAA8=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>編輯選項</value>
   </data>
 </root>

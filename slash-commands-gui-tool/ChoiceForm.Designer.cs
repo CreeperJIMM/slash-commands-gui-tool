@@ -38,9 +38,10 @@
             button1.Anchor = AnchorStyles.Top;
             button1.Font = new Font("Microsoft JhengHei UI", 18F);
             button1.Image = Images.plus;
-            button1.Location = new Point(285, 12);
+            button1.Location = new Point(489, 21);
+            button1.Margin = new Padding(5, 5, 5, 5);
             button1.Name = "button1";
-            button1.Size = new Size(70, 60);
+            button1.Size = new Size(120, 104);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
             button1.Click += Add_Click;
@@ -49,30 +50,34 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft JhengHei UI", 12F);
-            label1.Location = new Point(30, 22);
+            label1.Location = new Point(51, 38);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(59, 20);
+            label1.Size = new Size(101, 36);
             label1.TabIndex = 2;
             label1.Text = "Name:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(30, 45);
+            textBox1.Location = new Point(51, 78);
+            textBox1.Margin = new Padding(5, 5, 5, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(230, 23);
+            textBox1.Size = new Size(391, 34);
             textBox1.TabIndex = 3;
             // 
             // ChoiceForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(12F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(384, 81);
+            AutoSize = true;
+            ClientSize = new Size(658, 140);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(5, 5, 5, 5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ChoiceForm";
