@@ -19,8 +19,8 @@ Global
 		{43448A3B-A049-4EDA-9B8E-B6CE3FDADD90}.Debug|ARM64.Build.0 = Debug|ARM64
 		{43448A3B-A049-4EDA-9B8E-B6CE3FDADD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43448A3B-A049-4EDA-9B8E-B6CE3FDADD90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43448A3B-A049-4EDA-9B8E-B6CE3FDADD90}.Release|ARM64.ActiveCfg = Release|ARM64
-		{43448A3B-A049-4EDA-9B8E-B6CE3FDADD90}.Release|ARM64.Build.0 = Release|ARM64
+		{43448A3B-A049-4EDA-9B8E-B6CE3FDADD90}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{43448A3B-A049-4EDA-9B8E-B6CE3FDADD90}.Release|ARM64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
