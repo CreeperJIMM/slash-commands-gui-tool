@@ -440,6 +440,15 @@ namespace slash_commands_gui_tool {
         }
         
         /// <summary>
+        ///   查詢類似 It has been detected that the current save file has been modified by another application! Please save a new file! 的當地語系化字串。
+        /// </summary>
+        internal static string SaveHasChanged {
+            get {
+                return ResourceManager.GetString("SaveHasChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查詢類似 Save json file 的當地語系化字串。
         /// </summary>
         internal static string SaveJsonFile {

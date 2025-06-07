@@ -125,13 +125,13 @@
     <value>285, 34</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 40</value>
+    <value>237, 40</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>Enable (&amp;E)</value>
   </data>
   <data name="disableDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 40</value>
+    <value>237, 40</value>
   </data>
   <data name="disableDToolStripMenuItem.Text" xml:space="preserve">
     <value>Disable (&amp;D)</value>
@@ -867,6 +867,9 @@
   </data>
   <data name="&gt;&gt;cmdtypeLabel.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="comboBox1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="comboBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft JhengHei UI, 10pt</value>

@@ -12,6 +12,7 @@ namespace LocalFileRW
         public static readonly string fileFolder = Path.Combine(localPath, "SlashCommandsGUITool", "SavedFiles");
         public static string FilePath = "";
         public static string FileName = "";
+        public static DateTime SavedWriteTime = DateTime.MinValue;
         public LocalFileHelper()
         {
             Directory.CreateDirectory(fileFolder);
@@ -57,6 +58,7 @@ namespace LocalFileRW
             try {
                 string jsonContent = File.ReadAllText(FilePath);
                 SlashCommand[]? data = JsonConvert.DeserializeObject<SlashCommand[]>(jsonContent);
+                SavedWriteTime = File.GetLastWriteTime(FilePath);
                 if (data == null) return null;
                 return data;
             }
@@ -69,11 +71,20 @@ namespace LocalFileRW
             try {
                 string jsonData = JsonConvert.SerializeObject(slash);
                 File.WriteAllText(FilePath, jsonData);
+                SavedWriteTime = File.GetLastWriteTime(FilePath);
                 return true;
             }
             catch {
                 return false;
             }
+        }
+        public String GetFilePath()
+        {
+            return FilePath;
+        }
+        public DateTime GetFileWriteTime()
+        {
+            return SavedWriteTime;
         }
     }
 }

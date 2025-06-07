@@ -244,6 +244,9 @@
   <data name="SaveFailLocal" xml:space="preserve">
     <value>儲存失敗！</value>
   </data>
+  <data name="SaveHasChanged" xml:space="preserve">
+    <value>檢測到目前存檔遭到其他應用程式修改！請另存新檔！</value>
+  </data>
   <data name="SaveJsonFile" xml:space="preserve">
     <value>儲存json檔案</value>
   </data>

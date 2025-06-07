@@ -244,6 +244,9 @@ Do you want to save your changes before switching?</value>
   <data name="SaveFailLocal" xml:space="preserve">
     <value>Save Failed!</value>
   </data>
+  <data name="SaveHasChanged" xml:space="preserve">
+    <value>It has been detected that the current save file has been modified by another application! Please save a new file!</value>
+  </data>
   <data name="SaveJsonFile" xml:space="preserve">
     <value>Save json file</value>
   </data>

@@ -37,7 +37,6 @@ namespace slash_commands_gui_tool
         {
             theme.SetTheme(this);
             scale = this.DeviceDpi / 96f;
-            ChangeLanguage(USER_LANGUAGE);
             InitializeComponent();
         }
         public static void ChangeLanguage(string cultureName)
@@ -508,6 +507,7 @@ namespace slash_commands_gui_tool
             for (int i = 0; i < NowFloor; i++) {
                 if (NowOption == null) {
                     if (NowSlash.options == null) return;
+                    if(index == -1 || NowSlash.options.Count <= index) return;
                     CommandOption option = NowSlash.options[index];
                     pathIndex.Add(listBox3.SelectedIndex);
                     NowOption = option;
@@ -516,8 +516,12 @@ namespace slash_commands_gui_tool
                 else {
                     if (NowOption.options != null) {
                         if (NowFloor != i + 1 || index == -1) {
+                            if (NowSlash.options == null || NowSlash.options.Count <= path[i]) return;
                             if (i == 0) NowOption = NowSlash.options[path[i]];
-                            else NowOption = NowOption.options[path[i]];
+                            else {
+                                if (NowOption.options.Count <= path[i]) return;
+                                NowOption = NowOption.options[path[i]];
+                            }
                         }
                         else {
                             pathIndex.Add(index);
@@ -541,7 +545,8 @@ namespace slash_commands_gui_tool
                     if (dialog == DialogResult.Yes) {
                         if (Status) await SaveSingleCommand(NowSlash);
                         else {
-                            if (!local.SaveFile()) return false;
+                            if(string.IsNullOrEmpty(local.GetFilePath()))
+                                if (!local.SaveFile()) return false;
                             if (!local.WriteFile(LocalCache.ToArray())) {
                                 MessageBox.Show(Resource.SaveFailLocal, Resource.FileError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return false;
@@ -746,6 +751,7 @@ namespace slash_commands_gui_tool
                 slash.name = textBox1.Text;
                 slash.description = "-";
                 slash.type = 1;
+                slash.nsfw = false;
                 if (select == null) return;
                 await discord.PostCommandAsync(select, slash, toolStripProgressBar1);
                 await LoadCommands();
@@ -766,6 +772,7 @@ namespace slash_commands_gui_tool
                 slash.name = textBox2.Text;
                 slash.description = "-";
                 slash.type = 1;
+                slash.nsfw = false;
                 LocalCache.Add(slash);
                 LoadLocalCommands();
                 textBox2.Text = string.Empty;
@@ -806,6 +813,8 @@ namespace slash_commands_gui_tool
             groupBox4.Enabled = false;
             groupBox3.Visible = false;
         }
+        private DateTime KeyCooldown = DateTime.MinValue;
+        //¼öÁä¥\¯à
         private void KeyEvent(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.S && Changed) {
@@ -814,6 +823,17 @@ namespace slash_commands_gui_tool
             else if (e.KeyCode == Keys.Enter) {
                 if (!string.IsNullOrEmpty(textBox1.Text)) plusButton_Event("Bot");
                 else if (!string.IsNullOrEmpty(textBox2.Text)) plusButton_Event("Local");
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+            else if (e.KeyCode == Keys.Back) {
+                if (this.ActiveControl == null) return;
+                Control focused = this.ActiveControl;
+                if (focused is TextBoxBase || focused is ComboBox) return;
+                if (!backbutton.Enabled) return;
+                if ((DateTime.Now - KeyCooldown).TotalMilliseconds < 100) return;
+                EnterOption(NowFloor - 1);
+                KeyCooldown = DateTime.Now;
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
@@ -985,7 +1005,7 @@ namespace slash_commands_gui_tool
             if (copy == null) return;
             int index = LocalCache.FindIndex(m => m.name == slash.name);
             if (index != -1) {
-                DialogResult dialog = MessageBox.Show($"{Resource.PushDuplicate1}{slash.name}{Resource.PushDuplicate2}", Resource.Warning, MessageBoxButtons.YesNo);
+                DialogResult dialog = MessageBox.Show($"{Resource.PushDuplicate1}{slash.name}\n{Resource.PushDuplicate2}", Resource.Warning, MessageBoxButtons.YesNo);
                 if (dialog == DialogResult.No) return;
                 LocalCache[index] = copy;
             }
@@ -1025,7 +1045,6 @@ namespace slash_commands_gui_tool
             await discord.PostCommandAsync(select, slash, toolStripProgressBar1);
             await Task.Delay(new TimeSpan(0, 0, 0, 0, 100));
         }
-
         private async void LoadFile_Click(object sender, EventArgs e)
         {
             if (!await ChangeEvent(listBox2)) return;
@@ -1067,9 +1086,21 @@ namespace slash_commands_gui_tool
                 }
             }
             else {
-                if (string.IsNullOrEmpty(LocalFileHelper.FilePath))
+                if (string.IsNullOrEmpty(local.GetFilePath())) {
                     if (!local.SaveFile()) return;
-                if (!local.WriteFile(LocalCache.ToArray())) {
+                }
+                try {
+                    DateTime currentWriteTime = File.GetLastWriteTime(local.GetFilePath());
+                    if (local.GetFileWriteTime() != DateTime.MinValue && local.GetFileWriteTime() != currentWriteTime) {
+                        MessageBox.Show(Resource.SaveHasChanged, Resource.FileError, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (!local.SaveFile()) return;
+                    }
+                    if (!local.WriteFile(LocalCache.ToArray())) {
+                        MessageBox.Show(Resource.SaveFailLocal, Resource.FileError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                catch {
                     MessageBox.Show(Resource.SaveFailLocal, Resource.FileError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
