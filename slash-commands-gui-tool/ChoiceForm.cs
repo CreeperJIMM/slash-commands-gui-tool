@@ -12,6 +12,7 @@ namespace slash_commands_gui_tool
             theme.SetTheme(this);
             Form1.ChangeLanguage(Form1.USER_LANGUAGE);
             InitializeComponent();
+            scale = this.DeviceDpi / 96f;
             this.AutoScroll = true;
             this.HorizontalScroll.Enabled = false;
             this.HorizontalScroll.Visible = false;
@@ -21,6 +22,7 @@ namespace slash_commands_gui_tool
         public static string? LocalizationEdit = null;
         public bool Changed = false;
         bool Operation = false;
+        float scale = 100f;
         int type = 3;
         private void ChoiceForm_Load(object sender, EventArgs e)
         {
@@ -189,21 +191,21 @@ namespace slash_commands_gui_tool
                 index++;
             }
             int offset = AutoScrollPosition.Y;
-            label1.Location = new Point(23, offset + 10 + (index * 120));
-            textBox1.Location = new Point(23, offset + 30 + (index * 120));
-            button1.Location = new Point(285, offset + 12 + (index * 120));
+            label1.Location = new Point(label1.Location.X, (int)(((offset + 10) * scale) + (index * 120)));
+            textBox1.Location = new Point(textBox1.Location.X, (int)(((offset + 30) * scale) + (index * 120)));
+            button1.Location = new Point(button1.Location.X, (int)(((offset + 12) * scale) + (index * 120)));
             if (!FormHelper.UpHasSpace(this, e, up, 120))
                 if (!FormHelper.IsReachBottom(this, e, 120))
-                    this.Size = new Size(400, (index + 1) * 120);
+                    this.Size = new Size(Width, (index + 1) * 120);
                 else
                     AutoScrollPosition = new Point(0, VerticalScroll.Maximum);
             else
-                this.Size = new Size(400, (index + 1) * 120);
+                this.Size = new Size(Width, (index + 1) * 120);
             Operation = true;
         }
         private GP DrawComponent(CommandOptionChoice choice, int index)
         {
-            int offset = AutoScrollPosition.Y;
+            int offset = (int)(AutoScrollPosition.Y * scale);
             Label label = new Label();
             label.Text = $"{choice.name}";
             label.AutoSize = true;
@@ -213,7 +215,7 @@ namespace slash_commands_gui_tool
 
             RichTextBox textBox = new RichTextBox();
             textBox.BorderStyle = BorderStyle.Fixed3D;
-            textBox.Size = new Size(340, 80);
+            textBox.Size = new Size(this.Size.Width - (60 * (int)scale), 80);
             textBox.Text = $"{choice.value}";
             textBox.Margin = new Padding(0);
             textBox.Tag = choice.name;
@@ -225,7 +227,7 @@ namespace slash_commands_gui_tool
             button.FlatStyle = FlatStyle.Flat;
             button.Text = "-";
             button.Size = new Size(25, 25);
-            button.Location = new Point(328, offset + 5 + (120 * index));
+            button.Location = new Point(this.Size.Width - (70 * (int)scale), offset + 5 + (120 * index));
             button.Margin = new Padding(0);
             button.Click += Minus_Click;
             button.Tag = choice.name;
@@ -235,7 +237,7 @@ namespace slash_commands_gui_tool
             Localbutton.FlatStyle = FlatStyle.Flat;
             Localbutton.Image = Images.localizations;
             Localbutton.Size = new Size(25, 25);
-            Localbutton.Location = new Point(303, offset + 5 + (120 * index));
+            Localbutton.Location = new Point(this.Size.Width - (95 * (int)scale), offset + 5 + (120 * index));
             Localbutton.Margin = new Padding(0);
             Localbutton.Click += Localbutton_Click;
             Localbutton.Tag = $"Choice,{choice.name}";

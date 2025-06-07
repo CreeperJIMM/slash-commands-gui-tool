@@ -37,6 +37,18 @@ namespace slash_commands_gui_tool
         {
             theme.SetTheme(this);
             scale = this.DeviceDpi / 96f;
+            //Language
+            CultureInfo currentUICulture = CultureInfo.CurrentUICulture;
+            string? lang = config.GetValue("General", "Language");
+            if (lang == null || lang == "null") {
+                USER_LANGUAGE = currentUICulture.Name;
+                ChangeLanguage(currentUICulture.Name);
+                config.SetValue("General", "Language", currentUICulture.Name);
+            }
+            else {
+                USER_LANGUAGE = lang;
+                ChangeLanguage(USER_LANGUAGE);
+            }
             InitializeComponent();
         }
         public static void ChangeLanguage(string cultureName)
@@ -57,20 +69,7 @@ namespace slash_commands_gui_tool
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            //Language
-            CultureInfo currentUICulture = CultureInfo.CurrentUICulture;
-            string? lang = config.GetValue("General", "Language");
-            if (lang == null || lang == "null") {
-                USER_LANGUAGE = currentUICulture.Name;
-                ChangeLanguage(currentUICulture.Name);
-                config.SetValue("General", "Language", currentUICulture.Name);
-            }
-            else {
-                USER_LANGUAGE = lang;
-                ChangeLanguage(USER_LANGUAGE);
-            }
-            Controls.Clear();
-            InitializeComponent();
+            ChangeSize();
             //AutoSync
             string? atsc = config.GetValue("General", "AutoSync");
             if (atsc != null) AutoSyncFunction(atsc);
@@ -218,6 +217,10 @@ namespace slash_commands_gui_tool
             cmdnameTextbox.Text = lastname = slash.name;
             cmdnameTextbox.ReadOnly = true;
             cmddescTextbox.Text = lastdesc = slash.description;
+            checkBox1.Visible = false;
+            checkBox2.Visible = false;
+            checkBox3.Visible = true;
+            editchoiceButton.Visible = false;
             if (slash.nsfw != null) checkBox3.Checked = (bool)slash.nsfw;
             listBox3.Items.Clear();
             if (slash.options != null && slash.options.Count > 0) {
@@ -507,7 +510,7 @@ namespace slash_commands_gui_tool
             for (int i = 0; i < NowFloor; i++) {
                 if (NowOption == null) {
                     if (NowSlash.options == null) return;
-                    if(index == -1 || NowSlash.options.Count <= index) return;
+                    if (index == -1 || NowSlash.options.Count <= index) return;
                     CommandOption option = NowSlash.options[index];
                     pathIndex.Add(listBox3.SelectedIndex);
                     NowOption = option;
@@ -545,7 +548,7 @@ namespace slash_commands_gui_tool
                     if (dialog == DialogResult.Yes) {
                         if (Status) await SaveSingleCommand(NowSlash);
                         else {
-                            if(string.IsNullOrEmpty(local.GetFilePath()))
+                            if (string.IsNullOrEmpty(local.GetFilePath()))
                                 if (!local.SaveFile()) return false;
                             if (!local.WriteFile(LocalCache.ToArray())) {
                                 MessageBox.Show(Resource.SaveFailLocal, Resource.FileError, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -601,6 +604,8 @@ namespace slash_commands_gui_tool
             if (NowSlash == null || NowSlash.options == null) return options;
             options = NowSlash.options;
             for (int i = 1; i < NowFloor; i++) {
+                if (path.Length <= (i - 1)) return options;
+                if (options.Count <= path[i - 1]) return options;
                 options = options[path[i - 1]].options;
             }
             return options;
@@ -729,6 +734,7 @@ namespace slash_commands_gui_tool
         }
         private void plusbutton_Click(object sender, EventArgs e)
         {
+
             Button? button = sender as Button;
             if (button == null || button.Tag == null) return;
             plusButton_Event((string)button.Tag);
@@ -797,6 +803,7 @@ namespace slash_commands_gui_tool
                 LoadLocalCommands();
                 IsSave = false;
             }
+            groupBox3.Visible = false;
         }
         private async void reloadButton_ClickAsync(object sender, EventArgs e)
         {
@@ -1178,6 +1185,44 @@ namespace slash_commands_gui_tool
             AboutForm about = new AboutForm();
             about.StartPosition = FormStartPosition.CenterParent;
             about.ShowDialog();
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            ChangeSize();
+        }
+
+        private void ChangeSize()
+        {
+            //高度自適應調整
+            groupBox1.Height = Height - statusStrip1.Height - groupBox1.Location.Y - GetSP(50);
+            groupBox2.Height = Height - statusStrip1.Height - groupBox2.Location.Y - GetSP(50);
+            groupBox3.Height = Height - statusStrip1.Height - groupBox3.Location.Y - GetSP(50);
+            listBox1.Height = groupBox1.Height - listBox1.Location.Y - GetSP(5);
+            listBox2.Height = groupBox2.Height - listBox2.Location.Y - GetSP(5);
+            updateButton.Location = new Point(updateButton.Location.X, groupBox3.Height - updateButton.Height - GetSP(5));
+            button4.Location = new Point(button4.Location.X, groupBox3.Height - button4.Height - GetSP(5));
+            listBox3.Height = groupBox3.Height - listBox3.Location.Y - button4.Height - GetSP(5);
+            groupBox6.Location = new Point(listBox3.Width + GetSP(12), groupBox3.Height - groupBox6.Height - updateButton.Height - GetSP(6));
+            cmdtypeLabel.Location = new Point(listBox3.Width + GetSP(12), groupBox3.Height - cmdtypeLabel.Height - groupBox6.Height - updateButton.Height - GetSP(15));
+            comboBox1.Location = new Point(listBox3.Width + cmdtypeLabel.Width + GetSP(12), groupBox3.Height - comboBox1.Height - groupBox6.Height - updateButton.Height - GetSP(16));
+            cmddescTextbox.Height = groupBox3.Height - groupBox6.Height - updateButton.Height - comboBox1.Height - GetSP(175);
+            //寬度自適應調整
+            groupBox2.Location = new Point(Width - groupBox2.Width - GetSP(20), groupBox2.Location.Y);
+            groupBox3.Width = Width - groupBox3.Location.X - groupBox2.Width - GetSP(25);
+            groupBox4.Width = Width - groupBox4.Location.X - groupBox2.Width - GetSP(25);
+            groupBox5.Width = groupBox3.Width - groupBox5.Location.X - GetSP(6);
+            cmdnameTextbox.Width = groupBox3.Width - cmdnameTextbox.Location.X - GetSP(6);
+            cmddescTextbox.Width = groupBox3.Width - cmddescTextbox.Location.X - GetSP(6);
+            groupBox6.Width = groupBox3.Width - groupBox6.Location.X - GetSP(6);
+            localizationButton1.Location = new Point(groupBox3.Width - localizationButton1.Width - GetSP(6), localizationButton1.Location.Y);
+            localizationButton2.Location = new Point(groupBox3.Width - localizationButton2.Width - GetSP(6), localizationButton2.Location.Y);
+            updateButton.Location = new Point(groupBox3.Width - updateButton.Width - GetSP(6), updateButton.Location.Y);
+        }
+
+        private int GetSP(int value)
+        {
+            return (int)(value * scale);
         }
 
         public static CommandType[] types = new CommandType[]

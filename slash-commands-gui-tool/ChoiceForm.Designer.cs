@@ -35,11 +35,10 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top;
             button1.Font = new Font("Microsoft JhengHei UI", 18F);
             button1.Image = Images.plus;
-            button1.Location = new Point(489, 21);
-            button1.Margin = new Padding(5, 5, 5, 5);
+            button1.Location = new Point(490, 21);
+            button1.Margin = new Padding(5);
             button1.Name = "button1";
             button1.Size = new Size(120, 104);
             button1.TabIndex = 0;
@@ -60,7 +59,7 @@
             // textBox1
             // 
             textBox1.Location = new Point(51, 78);
-            textBox1.Margin = new Padding(5, 5, 5, 5);
+            textBox1.Margin = new Padding(5);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(391, 34);
             textBox1.TabIndex = 3;
@@ -77,7 +76,7 @@
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ChoiceForm";

@@ -116,7 +116,7 @@
             // toolStripComboBox1
             // 
             toolStripComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            toolStripComboBox1.DropDownWidth = 150;
+            toolStripComboBox1.DropDownWidth = 180;
             toolStripComboBox1.Name = "toolStripComboBox1";
             resources.ApplyResources(toolStripComboBox1, "toolStripComboBox1");
             toolStripComboBox1.SelectedIndexChanged += ClientSelected;
@@ -620,14 +620,13 @@
             Controls.Add(groupBox2);
             Controls.Add(button1);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             KeyPreview = true;
             MainMenuStrip = menuStrip1;
-            MaximizeBox = false;
             Name = "Form1";
             FormClosing += Form1_FormClosing;
             Load += Form1_Load;
             KeyDown += KeyEvent;
+            Resize += Form1_Resize;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox2.ResumeLayout(false);

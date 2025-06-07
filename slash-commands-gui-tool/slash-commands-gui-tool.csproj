@@ -13,7 +13,7 @@
 	<SelfContained>true</SelfContained>
 	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
 	<GenerateSatelliteAssembliesForCore>true</GenerateSatelliteAssembliesForCore>
-	<DebugType>none</DebugType>
+
 	<ApplicationIcon>$this.Icon.ico</ApplicationIcon>
   </PropertyGroup>
 

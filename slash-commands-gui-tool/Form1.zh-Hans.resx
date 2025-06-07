@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripComboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 34</value>
-  </data>
   <data name="AutoSyncStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 34</value>
   </data>
@@ -154,21 +151,14 @@
   <data name="aboutIToolStripMenuItem.Text" xml:space="preserve">
     <value>关于 (&amp;A)</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 3, 0, 3</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1344, 40</value>
-  </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 40</value>
+    <value>206, 40</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>启用 (&amp;E)</value>
   </data>
   <data name="disableDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 40</value>
+    <value>206, 40</value>
   </data>
   <data name="disableDToolStripMenuItem.Text" xml:space="preserve">
     <value>停用 (&amp;D)</value>
@@ -192,22 +182,13 @@
     <value>开启本地指令资料夹 (&amp;S)</value>
   </data>
   <data name="languagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 40</value>
+    <value>247, 40</value>
   </data>
   <data name="languagesToolStripMenuItem.Text" xml:space="preserve">
     <value>介面语言 (&amp;L)</value>
   </data>
-  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 40</value>
-  </data>
-  <data name="chinese繁體中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 40</value>
-  </data>
-  <data name="chinese簡體中文SToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 40</value>
-  </data>
   <data name="uIThemeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 40</value>
+    <value>247, 40</value>
   </data>
   <data name="uIThemeToolStripMenuItem.Text" xml:space="preserve">
     <value>介面主题 (&amp;T)</value>
@@ -231,7 +212,7 @@
     <value>深色 (D)</value>
   </data>
   <data name="othersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 40</value>
+    <value>247, 40</value>
   </data>
   <data name="othersToolStripMenuItem.Text" xml:space="preserve">
     <value>进阶选项 (&amp;A)</value>
@@ -248,138 +229,20 @@
   <data name="clearApplicationsAndCloseToolStripMenuItem.Text" xml:space="preserve">
     <value>清除本地资料并退出</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 49</value>
-  </data>
-  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 54</value>
-  </data>
   <data name="button1.Text" xml:space="preserve">
     <value>删除客户端</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 199</value>
-  </data>
-  <data name="listBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 784</value>
-  </data>
-  <data name="plusbutton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 130</value>
-  </data>
-  <data name="plusbutton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="plusbutton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 64</value>
-  </data>
-  <data name="minusbutton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 130</value>
-  </data>
-  <data name="minusbutton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="minusbutton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 64</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1051, 47</value>
-  </data>
-  <data name="groupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>285, 1061</value>
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value>来自本地的 json挡案命令</value>
   </data>
-  <data name="savebutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 54</value>
-  </data>
-  <data name="savebutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="savebutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 68</value>
-  </data>
   <data name="savebutton.Text" xml:space="preserve">
     <value>存挡</value>
-  </data>
-  <data name="listBox2.ItemHeight" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="listBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 260</value>
-  </data>
-  <data name="listBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="listBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 784</value>
-  </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 203</value>
-  </data>
-  <data name="textBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 43</value>
-  </data>
-  <data name="loadbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 54</value>
-  </data>
-  <data name="loadbutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="loadbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 68</value>
   </data>
   <data name="loadbutton.Text" xml:space="preserve">
     <value>读取</value>
   </data>
-  <data name="backbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 36</value>
-  </data>
-  <data name="backbutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="backbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 55</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 111</value>
-  </data>
-  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 997</value>
-  </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Discord机器人已存在的</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 28</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 26</value>
@@ -387,81 +250,14 @@
   <data name="label2.Text" xml:space="preserve">
     <value>斜杠命令</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 140</value>
-  </data>
-  <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 43</value>
-  </data>
-  <data name="minusbutton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 62</value>
-  </data>
-  <data name="minusbutton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="minusbutton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 68</value>
-  </data>
-  <data name="plusbutton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 62</value>
-  </data>
-  <data name="plusbutton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="plusbutton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 68</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 170</value>
-  </data>
-  <data name="groupBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>734, 938</value>
-  </data>
   <data name="groupBox3.Text" xml:space="preserve">
     <value>单一斜杠命令细部调整</value>
-  </data>
-  <data name="updateButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>430, 867</value>
-  </data>
-  <data name="updateButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="updateButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 62</value>
   </data>
   <data name="updateButton.Text" xml:space="preserve">
     <value>储存并更新      </value>
   </data>
-  <data name="addoptionButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 137</value>
-  </data>
-  <data name="addoptionButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="addoptionButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 66</value>
-  </data>
   <data name="addoptionButton.Text" xml:space="preserve">
-    <value>编辑选项      </value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cmdtypeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Alpha</value>
-  </data>
-  <data name="cmdtypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 404</value>
-  </data>
-  <data name="cmdtypeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+    <value>编辑选项             </value>
   </data>
   <data name="cmdtypeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 44</value>
@@ -469,56 +265,11 @@
   <data name="cmdtypeLabel.Text" xml:space="preserve">
     <value>类别:</value>
   </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 404</value>
-  </data>
-  <data name="comboBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>369, 37</value>
-  </data>
-  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 463</value>
-  </data>
-  <data name="groupBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox6.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>489, 402</value>
-  </data>
   <data name="groupBox6.Text" xml:space="preserve">
     <value>命令参数</value>
   </data>
-  <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 73</value>
-  </data>
-  <data name="checkBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 46</value>
-  </data>
-  <data name="editchoiceButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 286</value>
-  </data>
-  <data name="editchoiceButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="editchoiceButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 94</value>
-  </data>
   <data name="editchoiceButton.Text" xml:space="preserve">
-    <value>编辑选择    </value>
-  </data>
-  <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 213</value>
-  </data>
-  <data name="checkBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>编辑选择       </value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 46</value>
@@ -526,74 +277,14 @@
   <data name="checkBox2.Text" xml:space="preserve">
     <value>自动完成</value>
   </data>
-  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 142</value>
-  </data>
-  <data name="checkBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 46</value>
   </data>
   <data name="checkBox1.Text" xml:space="preserve">
     <value>必填选项</value>
   </data>
-  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 870</value>
-  </data>
-  <data name="button4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 59</value>
-  </data>
   <data name="button4.Text" xml:space="preserve">
     <value>进入选择的选项</value>
-  </data>
-  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 31</value>
-  </data>
-  <data name="groupBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>648, 57</value>
-  </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 17</value>
-  </data>
-  <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 36</value>
-  </data>
-  <data name="localizationButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>674, 205</value>
-  </data>
-  <data name="localizationButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="localizationButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 49</value>
-  </data>
-  <data name="localizationButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>674, 99</value>
-  </data>
-  <data name="localizationButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="localizationButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 49</value>
-  </data>
-  <data name="cmdoptionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 92</value>
-  </data>
-  <data name="cmdoptionLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
   </data>
   <data name="cmdoptionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 44</value>
@@ -601,41 +292,11 @@
   <data name="cmdoptionLabel.Text" xml:space="preserve">
     <value>选项：</value>
   </data>
-  <data name="cmddescTextbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 255</value>
-  </data>
-  <data name="cmddescTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="cmddescTextbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>486, 127</value>
-  </data>
-  <data name="cmddescLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 206</value>
-  </data>
-  <data name="cmddescLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
   <data name="cmddescLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 44</value>
   </data>
   <data name="cmddescLabel.Text" xml:space="preserve">
     <value>简介：</value>
-  </data>
-  <data name="cmdnameTextbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>358, 149</value>
-  </data>
-  <data name="cmdnameTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="cmdnameTextbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 37</value>
-  </data>
-  <data name="cmdnameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 149</value>
-  </data>
-  <data name="cmdnameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
   </data>
   <data name="cmdnameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 44</value>
@@ -643,89 +304,14 @@
   <data name="cmdnameLabel.Text" xml:space="preserve">
     <value>名称：</value>
   </data>
-  <data name="listBox3.ItemHeight" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="listBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 208</value>
-  </data>
-  <data name="listBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="listBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 654</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 47</value>
-  </data>
-  <data name="groupBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>734, 120</value>
-  </data>
   <data name="groupBox4.Text" xml:space="preserve">
     <value>已选泽的斜杠命令操作</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>430, 54</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 44</value>
-  </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 36</value>
-  </data>
-  <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 75</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>复制命令到...</value>
   </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1112</value>
-  </data>
-  <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 41, 0</value>
-  </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1344, 35</value>
-  </data>
-  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 26</value>
-  </data>
-  <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1104, 26</value>
-  </data>
-  <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 25</value>
-  </data>
-  <data name="reloadButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 49</value>
-  </data>
-  <data name="reloadButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="reloadButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 54</value>
-  </data>
   <data name="reloadButton.Text" xml:space="preserve">
     <value>重新整理</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>12, 26</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1344, 1147</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1013,9 +599,6 @@
         AAPAAAAAAAAAA+AAAAAAAAAH8AAAAAAAAA/4AAAAAAAAH/gAAAAAAAAf/AAAAAAAAD/+AAAAAAAAf/+A
         AAAAAAH//8AAAAAAA///4AAAAAAH///4AAAAAB////4AAAAAf/8=
 </value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>9, 9, 9, 9</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>斜杠命令图形化工具</value>
