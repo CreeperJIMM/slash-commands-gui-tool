@@ -46,7 +46,7 @@ Your feedback and contributions are greatly appreciated and help us improve the 
 
 ## Security Measures
 
-Our application employs dual-layer encryption for your client token using DXAPI and AES. The encrypted token is securely stored in the `AppData/Local/SlashCommandsGUITool/database.db` file. This ensures that even if someone gains unauthorized access to your local database file, they cannot retrieve or decrypt your token. 
+Our application employs dual-layer encryption for your client token using DXAPI and AES. The encrypted token is securely stored in the `%localappdata%/SlashCommandsGUITool/database.db` file. This ensures that even if someone gains unauthorized access to your local database file, they cannot retrieve or decrypt your token. 
 We take your security and privacy seriously and are committed to protecting your sensitive information.
 
 ## Notices
