@@ -2,6 +2,8 @@
 Slash commands for discord bot
 ![banner](https://github.com/user-attachments/assets/787e5e92-d523-42e1-aadf-f9bca00f8de2)
 
+## Other Languages
+[Traditional Chinese 繁體中文](README_zhtw.md)
 
 ## Features
 - [x] Bot editing
