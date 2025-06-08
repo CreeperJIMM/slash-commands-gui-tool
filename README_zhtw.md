@@ -2,6 +2,9 @@
 Discord機器人用的 Slash Commands 工具
 ![banner](https://github.com/user-attachments/assets/787e5e92-d523-42e1-aadf-f9bca00f8de2)
 
+## 其他語言
+[English 英文](README.md)
+
 ## 功能
 - [x] 機器人編輯
 - [x] 本地編輯
