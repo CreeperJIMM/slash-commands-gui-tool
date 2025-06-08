@@ -23,8 +23,8 @@ Discord機器人用的 Slash Commands 工具
 SUB_COMMAND、SUB_COMMAND_GROUP、STRING、INTEGER、BOOLEAN、USER、CHANNEL、ROLE、MENTIONABLE、NUMBER、ATTACHMENT
 
 ## 需求
-~~[.NET 8.0 桌面運行時(版本8.0.12)](https://dotnet.microsoft.com/zh-tw/download/dotnet/thank-you/runtime-desktop-8.0.12-windows-x64-installer?cid=getdotnetcore)~~ <br> 
-→僅支援简易版本！若下載完整版本，則不需安裝此依賴！<br> 
+~~[.NET 8.0 Desktop runtime(版本8.0.12)](https://dotnet.microsoft.com/zh-tw/download/dotnet/thank-you/runtime-desktop-8.0.12-windows-x64-installer?cid=getdotnetcore)~~ <br> 
+→僅簡易版本需要！若下載完整版本，則不需安裝此依賴！<br> 
 此應用僅支援Windows系統。
 
 ## 使用流程
@@ -45,7 +45,7 @@ SUB_COMMAND、SUB_COMMAND_GROUP、STRING、INTEGER、BOOLEAN、USER、CHANNEL、
 
 ## 安全措施
 
-我們的應用程序採用雙層加密技術，對您的Client Token進行DXAPI與AES雙重加密。加密後的Token安全存於 `AppData/Local/SlashCommandsGUITool/database.db` 文件中，確保即使有人未授權存取，也無法解密提取您的Token。我們非常重視您的隱私與資料安全。
+我們的應用程序採用雙層加密技術，對您的Client Token進行DXAPI與AES雙重加密。加密後的Token安全存於 `%localappdata%/SlashCommandsGUITool/database.db` 文件中，確保即使有人未授權存取，也無法解密提取您的Token。我們非常重視您的隱私與資料安全。
 
 ## 注意事項
 切換指令到另一端（如從機器人切換到本地）而未儲存可能會出現問題，建議在切換前先儲存。
