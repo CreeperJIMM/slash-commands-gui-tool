@@ -59,6 +59,7 @@
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "LocalizationForm";
