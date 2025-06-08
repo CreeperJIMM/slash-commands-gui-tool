@@ -1215,8 +1215,8 @@ namespace slash_commands_gui_tool
             cmdnameTextbox.Width = groupBox3.Width - cmdnameTextbox.Location.X - GetSP(6);
             cmddescTextbox.Width = groupBox3.Width - cmddescTextbox.Location.X - GetSP(6);
             groupBox6.Width = groupBox3.Width - groupBox6.Location.X - GetSP(6);
-            localizationButton1.Location = new Point(groupBox3.Width - localizationButton1.Width - GetSP(6), localizationButton1.Location.Y);
-            localizationButton2.Location = new Point(groupBox3.Width - localizationButton2.Width - GetSP(6), localizationButton2.Location.Y);
+            localizationButton1.Location = new Point(groupBox3.Width - localizationButton1.Width - GetSP(6), groupBox5.Height + GetSP(22));
+            localizationButton2.Location = new Point(groupBox3.Width - localizationButton2.Width - GetSP(6), groupBox5.Height + cmdnameTextbox.Height + GetSP(62));
             updateButton.Location = new Point(groupBox3.Width - updateButton.Width - GetSP(6), updateButton.Location.Y);
         }
 

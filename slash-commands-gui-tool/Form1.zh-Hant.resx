@@ -128,7 +128,7 @@
     <value>166, 34</value>
   </data>
   <data name="newClientToolStripMenuItem.Text" xml:space="preserve">
-    <value>創建用戶端(&amp;N)</value>
+    <value>創建客戶端(&amp;N)</value>
   </data>
   <data name="oToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 34</value>

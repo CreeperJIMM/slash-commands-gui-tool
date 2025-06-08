@@ -623,6 +623,7 @@
             KeyPreview = true;
             MainMenuStrip = menuStrip1;
             Name = "Form1";
+            WindowState = FormWindowState.Maximized;
             FormClosing += Form1_FormClosing;
             Load += Form1_Load;
             KeyDown += KeyEvent;
