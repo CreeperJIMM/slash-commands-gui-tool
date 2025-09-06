@@ -69,7 +69,7 @@ namespace LocalFileRW
         public bool WriteFile(SlashCommand[] slash)
         {
             try {
-                string jsonData = JsonConvert.SerializeObject(slash);
+                string jsonData = JsonConvert.SerializeObject(slash, Formatting.Indented);
                 File.WriteAllText(FilePath, jsonData);
                 SavedWriteTime = File.GetLastWriteTime(FilePath);
                 return true;

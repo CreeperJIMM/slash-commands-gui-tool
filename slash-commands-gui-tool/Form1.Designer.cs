@@ -89,6 +89,7 @@
             cmdnameLabel = new Label();
             listBox3 = new ListBox();
             groupBox4 = new GroupBox();
+            button3 = new Button();
             label1 = new Label();
             button2 = new Button();
             statusStrip1 = new StatusStrip();
@@ -108,161 +109,161 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(menuStrip1, "menuStrip1");
             menuStrip1.ImageScalingSize = new Size(28, 28);
             menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripComboBox1, AutoSyncStripMenuItem, newClientToolStripMenuItem, oToolStripMenuItem, settingsToolStripMenuItem, aboutIToolStripMenuItem });
-            resources.ApplyResources(menuStrip1, "menuStrip1");
             menuStrip1.Name = "menuStrip1";
             // 
             // toolStripComboBox1
             // 
+            resources.ApplyResources(toolStripComboBox1, "toolStripComboBox1");
             toolStripComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             toolStripComboBox1.DropDownWidth = 180;
             toolStripComboBox1.Name = "toolStripComboBox1";
-            resources.ApplyResources(toolStripComboBox1, "toolStripComboBox1");
             toolStripComboBox1.SelectedIndexChanged += ClientSelected;
             // 
             // AutoSyncStripMenuItem
             // 
+            resources.ApplyResources(AutoSyncStripMenuItem, "AutoSyncStripMenuItem");
             AutoSyncStripMenuItem.BackColor = SystemColors.Control;
             AutoSyncStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1, disableDToolStripMenuItem });
             AutoSyncStripMenuItem.Name = "AutoSyncStripMenuItem";
-            resources.ApplyResources(AutoSyncStripMenuItem, "AutoSyncStripMenuItem");
             // 
             // toolStripMenuItem1
             // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
             resources.ApplyResources(toolStripMenuItem1, "toolStripMenuItem1");
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Tag = "enable";
             toolStripMenuItem1.Click += autoSync_Click;
             // 
             // disableDToolStripMenuItem
             // 
-            disableDToolStripMenuItem.Name = "disableDToolStripMenuItem";
             resources.ApplyResources(disableDToolStripMenuItem, "disableDToolStripMenuItem");
+            disableDToolStripMenuItem.Name = "disableDToolStripMenuItem";
             disableDToolStripMenuItem.Tag = "disable";
             disableDToolStripMenuItem.Click += autoSync_Click;
             // 
             // newClientToolStripMenuItem
             // 
-            newClientToolStripMenuItem.Name = "newClientToolStripMenuItem";
             resources.ApplyResources(newClientToolStripMenuItem, "newClientToolStripMenuItem");
+            newClientToolStripMenuItem.Name = "newClientToolStripMenuItem";
             newClientToolStripMenuItem.Click += CreateClient_Click;
             // 
             // oToolStripMenuItem
             // 
+            resources.ApplyResources(oToolStripMenuItem, "oToolStripMenuItem");
             oToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { backupBotToLocalToolStripMenuItem, copyAllLocalToBotToolStripMenuItem, localCommandSaveFolderToolStripMenuItem });
             oToolStripMenuItem.Name = "oToolStripMenuItem";
-            resources.ApplyResources(oToolStripMenuItem, "oToolStripMenuItem");
             // 
             // backupBotToLocalToolStripMenuItem
             // 
-            backupBotToLocalToolStripMenuItem.Name = "backupBotToLocalToolStripMenuItem";
             resources.ApplyResources(backupBotToLocalToolStripMenuItem, "backupBotToLocalToolStripMenuItem");
+            backupBotToLocalToolStripMenuItem.Name = "backupBotToLocalToolStripMenuItem";
             backupBotToLocalToolStripMenuItem.Click += backupToLocal_Click;
             // 
             // copyAllLocalToBotToolStripMenuItem
             // 
-            copyAllLocalToBotToolStripMenuItem.Name = "copyAllLocalToBotToolStripMenuItem";
             resources.ApplyResources(copyAllLocalToBotToolStripMenuItem, "copyAllLocalToBotToolStripMenuItem");
+            copyAllLocalToBotToolStripMenuItem.Name = "copyAllLocalToBotToolStripMenuItem";
             copyAllLocalToBotToolStripMenuItem.Click += PushToBot_Click;
             // 
             // localCommandSaveFolderToolStripMenuItem
             // 
-            localCommandSaveFolderToolStripMenuItem.Name = "localCommandSaveFolderToolStripMenuItem";
             resources.ApplyResources(localCommandSaveFolderToolStripMenuItem, "localCommandSaveFolderToolStripMenuItem");
+            localCommandSaveFolderToolStripMenuItem.Name = "localCommandSaveFolderToolStripMenuItem";
             localCommandSaveFolderToolStripMenuItem.Click += OpenFolder_Click;
             // 
             // settingsToolStripMenuItem
             // 
+            resources.ApplyResources(settingsToolStripMenuItem, "settingsToolStripMenuItem");
             settingsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { languagesToolStripMenuItem, uIThemeToolStripMenuItem, othersToolStripMenuItem });
             settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            resources.ApplyResources(settingsToolStripMenuItem, "settingsToolStripMenuItem");
             // 
             // languagesToolStripMenuItem
             // 
+            resources.ApplyResources(languagesToolStripMenuItem, "languagesToolStripMenuItem");
             languagesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { englishToolStripMenuItem, chinese繁體中文ToolStripMenuItem, chinese簡體中文SToolStripMenuItem });
             languagesToolStripMenuItem.Name = "languagesToolStripMenuItem";
-            resources.ApplyResources(languagesToolStripMenuItem, "languagesToolStripMenuItem");
             // 
             // englishToolStripMenuItem
             // 
-            englishToolStripMenuItem.Name = "englishToolStripMenuItem";
             resources.ApplyResources(englishToolStripMenuItem, "englishToolStripMenuItem");
+            englishToolStripMenuItem.Name = "englishToolStripMenuItem";
             englishToolStripMenuItem.Tag = "en-US";
             englishToolStripMenuItem.Click += changeLanguage_Click;
             // 
             // chinese繁體中文ToolStripMenuItem
             // 
-            chinese繁體中文ToolStripMenuItem.Name = "chinese繁體中文ToolStripMenuItem";
             resources.ApplyResources(chinese繁體中文ToolStripMenuItem, "chinese繁體中文ToolStripMenuItem");
+            chinese繁體中文ToolStripMenuItem.Name = "chinese繁體中文ToolStripMenuItem";
             chinese繁體中文ToolStripMenuItem.Tag = "zh-TW";
             chinese繁體中文ToolStripMenuItem.Click += changeLanguage_Click;
             // 
             // chinese簡體中文SToolStripMenuItem
             // 
-            chinese簡體中文SToolStripMenuItem.Name = "chinese簡體中文SToolStripMenuItem";
             resources.ApplyResources(chinese簡體中文SToolStripMenuItem, "chinese簡體中文SToolStripMenuItem");
+            chinese簡體中文SToolStripMenuItem.Name = "chinese簡體中文SToolStripMenuItem";
             chinese簡體中文SToolStripMenuItem.Tag = "zh-CN";
             chinese簡體中文SToolStripMenuItem.Click += changeLanguage_Click;
             // 
             // uIThemeToolStripMenuItem
             // 
+            resources.ApplyResources(uIThemeToolStripMenuItem, "uIThemeToolStripMenuItem");
             uIThemeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { systemSToolStripMenuItem, whiteWToolStripMenuItem, darkDToolStripMenuItem });
             uIThemeToolStripMenuItem.Name = "uIThemeToolStripMenuItem";
-            resources.ApplyResources(uIThemeToolStripMenuItem, "uIThemeToolStripMenuItem");
             // 
             // systemSToolStripMenuItem
             // 
-            systemSToolStripMenuItem.Name = "systemSToolStripMenuItem";
             resources.ApplyResources(systemSToolStripMenuItem, "systemSToolStripMenuItem");
+            systemSToolStripMenuItem.Name = "systemSToolStripMenuItem";
             systemSToolStripMenuItem.Tag = "System";
             systemSToolStripMenuItem.Click += ThemeMode_click;
             // 
             // whiteWToolStripMenuItem
             // 
-            whiteWToolStripMenuItem.Name = "whiteWToolStripMenuItem";
             resources.ApplyResources(whiteWToolStripMenuItem, "whiteWToolStripMenuItem");
+            whiteWToolStripMenuItem.Name = "whiteWToolStripMenuItem";
             whiteWToolStripMenuItem.Tag = "White";
             whiteWToolStripMenuItem.Click += ThemeMode_click;
             // 
             // darkDToolStripMenuItem
             // 
-            darkDToolStripMenuItem.Name = "darkDToolStripMenuItem";
             resources.ApplyResources(darkDToolStripMenuItem, "darkDToolStripMenuItem");
+            darkDToolStripMenuItem.Name = "darkDToolStripMenuItem";
             darkDToolStripMenuItem.Tag = "Dark";
             darkDToolStripMenuItem.Click += ThemeMode_click;
             // 
             // othersToolStripMenuItem
             // 
+            resources.ApplyResources(othersToolStripMenuItem, "othersToolStripMenuItem");
             othersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { resetAppliToolStripMenuItem, clearApplicationsAndCloseToolStripMenuItem });
             othersToolStripMenuItem.ForeColor = Color.Red;
             othersToolStripMenuItem.Name = "othersToolStripMenuItem";
-            resources.ApplyResources(othersToolStripMenuItem, "othersToolStripMenuItem");
             // 
             // resetAppliToolStripMenuItem
             // 
+            resources.ApplyResources(resetAppliToolStripMenuItem, "resetAppliToolStripMenuItem");
             resetAppliToolStripMenuItem.ForeColor = Color.Red;
             resetAppliToolStripMenuItem.Name = "resetAppliToolStripMenuItem";
-            resources.ApplyResources(resetAppliToolStripMenuItem, "resetAppliToolStripMenuItem");
             resetAppliToolStripMenuItem.Click += ResetDatabase;
             // 
             // clearApplicationsAndCloseToolStripMenuItem
             // 
+            resources.ApplyResources(clearApplicationsAndCloseToolStripMenuItem, "clearApplicationsAndCloseToolStripMenuItem");
             clearApplicationsAndCloseToolStripMenuItem.ForeColor = Color.Red;
             clearApplicationsAndCloseToolStripMenuItem.Name = "clearApplicationsAndCloseToolStripMenuItem";
-            resources.ApplyResources(clearApplicationsAndCloseToolStripMenuItem, "clearApplicationsAndCloseToolStripMenuItem");
             clearApplicationsAndCloseToolStripMenuItem.Click += ClearLocalAndExit;
             // 
             // aboutIToolStripMenuItem
             // 
-            aboutIToolStripMenuItem.Name = "aboutIToolStripMenuItem";
             resources.ApplyResources(aboutIToolStripMenuItem, "aboutIToolStripMenuItem");
+            aboutIToolStripMenuItem.Name = "aboutIToolStripMenuItem";
             aboutIToolStripMenuItem.Click += about_Click;
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(255, 192, 192);
             resources.ApplyResources(button1, "button1");
+            button1.BackColor = Color.FromArgb(255, 192, 192);
             button1.FlatAppearance.BorderSize = 0;
             button1.Name = "button1";
             button1.UseVisualStyleBackColor = false;
@@ -270,8 +271,8 @@
             // 
             // listBox1
             // 
-            listBox1.FormattingEnabled = true;
             resources.ApplyResources(listBox1, "listBox1");
+            listBox1.FormattingEnabled = true;
             listBox1.Name = "listBox1";
             listBox1.SelectionMode = SelectionMode.MultiExtended;
             listBox1.Tag = "Bot";
@@ -279,9 +280,9 @@
             // 
             // plusbutton2
             // 
+            resources.ApplyResources(plusbutton2, "plusbutton2");
             plusbutton2.BackColor = Color.FromArgb(128, 255, 128);
             plusbutton2.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(plusbutton2, "plusbutton2");
             plusbutton2.Name = "plusbutton2";
             plusbutton2.Tag = "Local";
             plusbutton2.UseVisualStyleBackColor = false;
@@ -289,9 +290,9 @@
             // 
             // minusbutton2
             // 
+            resources.ApplyResources(minusbutton2, "minusbutton2");
             minusbutton2.BackColor = Color.FromArgb(255, 128, 128);
             minusbutton2.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(minusbutton2, "minusbutton2");
             minusbutton2.Name = "minusbutton2";
             minusbutton2.Tag = "Local";
             minusbutton2.UseVisualStyleBackColor = false;
@@ -299,13 +300,13 @@
             // 
             // groupBox2
             // 
+            resources.ApplyResources(groupBox2, "groupBox2");
             groupBox2.Controls.Add(savebutton);
             groupBox2.Controls.Add(listBox2);
             groupBox2.Controls.Add(textBox2);
             groupBox2.Controls.Add(loadbutton);
             groupBox2.Controls.Add(minusbutton2);
             groupBox2.Controls.Add(plusbutton2);
-            resources.ApplyResources(groupBox2, "groupBox2");
             groupBox2.Name = "groupBox2";
             groupBox2.TabStop = false;
             // 
@@ -318,8 +319,8 @@
             // 
             // listBox2
             // 
-            listBox2.FormattingEnabled = true;
             resources.ApplyResources(listBox2, "listBox2");
+            listBox2.FormattingEnabled = true;
             listBox2.Name = "listBox2";
             listBox2.SelectionMode = SelectionMode.MultiExtended;
             listBox2.Tag = "Local";
@@ -347,12 +348,12 @@
             // 
             // groupBox1
             // 
+            resources.ApplyResources(groupBox1, "groupBox1");
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(minusbutton1);
             groupBox1.Controls.Add(listBox1);
             groupBox1.Controls.Add(plusbutton1);
-            resources.ApplyResources(groupBox1, "groupBox1");
             groupBox1.Name = "groupBox1";
             groupBox1.TabStop = false;
             // 
@@ -368,9 +369,9 @@
             // 
             // minusbutton1
             // 
+            resources.ApplyResources(minusbutton1, "minusbutton1");
             minusbutton1.BackColor = Color.FromArgb(255, 128, 128);
             minusbutton1.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(minusbutton1, "minusbutton1");
             minusbutton1.Name = "minusbutton1";
             minusbutton1.Tag = "Bot";
             minusbutton1.UseVisualStyleBackColor = false;
@@ -378,9 +379,9 @@
             // 
             // plusbutton1
             // 
+            resources.ApplyResources(plusbutton1, "plusbutton1");
             plusbutton1.BackColor = Color.FromArgb(128, 255, 128);
             plusbutton1.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(plusbutton1, "plusbutton1");
             plusbutton1.Name = "plusbutton1";
             plusbutton1.Tag = "Bot";
             plusbutton1.UseVisualStyleBackColor = false;
@@ -388,6 +389,7 @@
             // 
             // groupBox3
             // 
+            resources.ApplyResources(groupBox3, "groupBox3");
             groupBox3.Controls.Add(updateButton);
             groupBox3.Controls.Add(addoptionButton);
             groupBox3.Controls.Add(cmdtypeLabel);
@@ -404,7 +406,6 @@
             groupBox3.Controls.Add(cmdnameTextbox);
             groupBox3.Controls.Add(cmdnameLabel);
             groupBox3.Controls.Add(listBox3);
-            resources.ApplyResources(groupBox3, "groupBox3");
             groupBox3.Name = "groupBox3";
             groupBox3.TabStop = false;
             // 
@@ -431,19 +432,19 @@
             // 
             // comboBox1
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             resources.ApplyResources(comboBox1, "comboBox1");
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Name = "comboBox1";
             comboBox1.SelectedIndexChanged += TypeChangedEvent;
             // 
             // groupBox6
             // 
+            resources.ApplyResources(groupBox6, "groupBox6");
             groupBox6.Controls.Add(checkBox3);
             groupBox6.Controls.Add(editchoiceButton);
             groupBox6.Controls.Add(checkBox2);
             groupBox6.Controls.Add(checkBox1);
-            resources.ApplyResources(groupBox6, "groupBox6");
             groupBox6.Name = "groupBox6";
             groupBox6.TabStop = false;
             // 
@@ -488,8 +489,8 @@
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(linkLabel1);
             resources.ApplyResources(groupBox5, "groupBox5");
+            groupBox5.Controls.Add(linkLabel1);
             groupBox5.Name = "groupBox5";
             groupBox5.TabStop = false;
             // 
@@ -502,8 +503,8 @@
             // 
             // localizationButton2
             // 
-            localizationButton2.Image = Images.localizations;
             resources.ApplyResources(localizationButton2, "localizationButton2");
+            localizationButton2.Image = Images.localizations;
             localizationButton2.Name = "localizationButton2";
             localizationButton2.Tag = "description";
             localizationButton2.UseVisualStyleBackColor = true;
@@ -511,8 +512,8 @@
             // 
             // localizationButton1
             // 
-            localizationButton1.Image = Images.localizations;
             resources.ApplyResources(localizationButton1, "localizationButton1");
+            localizationButton1.Image = Images.localizations;
             localizationButton1.Name = "localizationButton1";
             localizationButton1.Tag = "name";
             localizationButton1.UseVisualStyleBackColor = true;
@@ -550,18 +551,26 @@
             // 
             // listBox3
             // 
-            listBox3.FormattingEnabled = true;
             resources.ApplyResources(listBox3, "listBox3");
+            listBox3.FormattingEnabled = true;
             listBox3.Name = "listBox3";
             listBox3.MouseDoubleClick += listBox3_DoubleClick;
             // 
             // groupBox4
             // 
+            resources.ApplyResources(groupBox4, "groupBox4");
+            groupBox4.Controls.Add(button3);
             groupBox4.Controls.Add(label1);
             groupBox4.Controls.Add(button2);
-            resources.ApplyResources(groupBox4, "groupBox4");
             groupBox4.Name = "groupBox4";
             groupBox4.TabStop = false;
+            // 
+            // button3
+            // 
+            resources.ApplyResources(button3, "button3");
+            button3.Name = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // label1
             // 
@@ -577,33 +586,33 @@
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(statusStrip1, "statusStrip1");
             statusStrip1.ImageScalingSize = new Size(28, 28);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripProgressBar1 });
-            resources.ApplyResources(statusStrip1, "statusStrip1");
             statusStrip1.Name = "statusStrip1";
             statusStrip1.SizingGrip = false;
             // 
             // toolStripStatusLabel1
             // 
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             resources.ApplyResources(toolStripStatusLabel1, "toolStripStatusLabel1");
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             // 
             // toolStripStatusLabel2
             // 
-            toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             resources.ApplyResources(toolStripStatusLabel2, "toolStripStatusLabel2");
+            toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             toolStripStatusLabel2.Spring = true;
             // 
             // toolStripProgressBar1
             // 
-            toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(toolStripProgressBar1, "toolStripProgressBar1");
+            toolStripProgressBar1.Name = "toolStripProgressBar1";
             // 
             // reloadButton
             // 
+            resources.ApplyResources(reloadButton, "reloadButton");
             reloadButton.BackColor = SystemColors.Control;
             reloadButton.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(reloadButton, "reloadButton");
             reloadButton.Name = "reloadButton";
             reloadButton.UseVisualStyleBackColor = false;
             reloadButton.Click += reloadButton_ClickAsync;
@@ -717,5 +726,6 @@
         private ToolStripMenuItem localCommandSaveFolderToolStripMenuItem;
         private ToolStripMenuItem aboutIToolStripMenuItem;
         private CheckBox checkBox3;
+        private Button button3;
     }
 }

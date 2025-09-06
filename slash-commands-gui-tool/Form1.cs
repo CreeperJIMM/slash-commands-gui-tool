@@ -7,6 +7,7 @@ using LocalFileRW;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace slash_commands_gui_tool
 {
@@ -193,7 +194,7 @@ namespace slash_commands_gui_tool
             SlashCommand? slash = BotCache.Find(s => s.id == simple.id);
             if (select == null || simple.id == null) return null;
             if (slash == null) {
-                if (discord.IsRequestAllowed(500) != -1) return null;
+                if (discord.IsRequestAllowed(100) != -1) return null;
                 slash = await discord.GetCommandAsync(select, simple.id, toolStripProgressBar1);
             }
             if (slash == null) return null;
@@ -413,22 +414,9 @@ namespace slash_commands_gui_tool
             //更新listbox
             List<int> list = listBox.SelectedIndices.Cast<int>().ToList();
             if (list.Count == 1) {//單選
-                Operation = false;
-                plusbutton1.Enabled = true;
-                minusbutton1.Enabled = true;
-                groupBox3.Visible = true;
-                groupBox3.Enabled = false;
-                groupBox6.Visible = true;
-                checkBox1.Visible = false;
-                checkBox2.Visible = false;
-                checkBox3.Visible = true;
-                editchoiceButton.Visible = false;
-                label1.Visible = false;
-                Changed = false;
                 SelectIndex = listBox.SelectedIndex;
-                NowFloor = 0;
-                NowOption = null;
-                groupBox3.Enabled = true;
+                button3.Enabled = true;
+                ResetOperation();
                 if (Status) {
                     if (BotSlash == null) return;
                     SimpleSlash simple = BotSlash[SelectIndex];
@@ -442,10 +430,10 @@ namespace slash_commands_gui_tool
                     pathIndex.Clear();
                     UpdateCommand(slash);
                 }
-
             }
             else {
                 NowSlash = null;
+                button3.Enabled = false;
                 plusbutton1.Enabled = false;
                 minusbutton1.Enabled = false;
                 groupBox3.Visible = false;
@@ -456,6 +444,24 @@ namespace slash_commands_gui_tool
             Operation = true;
             if (Status) label1.Text = Resource.ToLocal;
             else label1.Text = Resource.ToBot;
+        }
+        private void ResetOperation()
+        {
+            Operation = false;
+            plusbutton1.Enabled = true;
+            minusbutton1.Enabled = true;
+            groupBox3.Visible = true;
+            groupBox3.Enabled = false;
+            groupBox6.Visible = true;
+            checkBox1.Visible = false;
+            checkBox2.Visible = false;
+            checkBox3.Visible = true;
+            editchoiceButton.Visible = false;
+            label1.Visible = false;
+            Changed = false;
+            NowFloor = 0;
+            NowOption = null;
+            groupBox3.Enabled = true;
         }
         private void listBox3_DoubleClick(object sender, MouseEventArgs e)
         {
@@ -604,10 +610,12 @@ namespace slash_commands_gui_tool
             if (NowSlash == null || NowSlash.options == null) return options;
             options = NowSlash.options;
             for (int i = 1; i < NowFloor; i++) {
+                if (options == null) return new List<CommandOption>();
                 if (path.Length <= (i - 1)) return options;
                 if (options.Count <= path[i - 1]) return options;
                 options = options[path[i - 1]].options;
             }
+            if (options == null) return new List<CommandOption>();
             return options;
         }
 
@@ -822,6 +830,7 @@ namespace slash_commands_gui_tool
         }
         private DateTime KeyCooldown = DateTime.MinValue;
         //熱鍵功能
+        CommandOption copiedOption;
         private void KeyEvent(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.S && Changed) {
@@ -844,6 +853,95 @@ namespace slash_commands_gui_tool
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
+            else if (e.Control && e.KeyCode == Keys.C) {
+                var list = GetCurrentOptionList();
+                int index = listBox3.SelectedIndex;
+                if (index == -1 || list == null || list.Count <= index) return;
+                copiedOption = SlashCommand.Clone(list[index]);
+                MessageBox.Show($"已複製選項：{copiedOption.name}", "複製成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string json = JsonConvert.SerializeObject(copiedOption, Formatting.Indented);
+                Clipboard.SetText(json);
+            }
+            else if (e.Control && e.KeyCode == Keys.V) {
+                var list = GetCurrentOptionList();
+                try {
+                    string clipboardText = Clipboard.GetText(TextDataFormat.Text);
+                    var pastedFromClipboard = JsonConvert.DeserializeObject<CommandOption>(clipboardText);
+                    if (pastedFromClipboard != null) copiedOption = pastedFromClipboard;
+                }
+                catch {
+                    MessageBox.Show("你貼上的不是選項的格式！", "貼上失敗", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (copiedOption == null || list == null) return;
+                if (!CanPasteOption(copiedOption)) {
+                    MessageBox.Show($"無法貼上：當前層級不允許貼上類型 {copiedOption.type} 的選項", "貼上失敗", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                // 檢查是否已有同名項目
+                int existingIndex = list.FindIndex(o => o.name == copiedOption.name);
+                if (existingIndex >= 0) {
+                    var result = MessageBox.Show(
+                        $"已有名為「{copiedOption.name}」的選項，是否要取代原有選項？",
+                        "名稱重複",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+                    if (result == DialogResult.No) return;
+                    // 取代原有選項：從資料與 UI 中移除
+                    list.RemoveAt(existingIndex);
+                    listBox3.Items.RemoveAt(existingIndex);
+                }
+                var pasted = SlashCommand.Clone(copiedOption);
+                list.Add(pasted);
+                listBox3.Items.Add($"[{pasted.type}] {pasted.name}");
+                listBox3.SelectedIndex = listBox3.Items.Count - 1;
+                Changed = true;
+                MessageBox.Show($"已貼上選項：{pasted.name}", "貼上成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private List<CommandOption>? GetCurrentOptionList()
+        {
+            if (NowSlash == null) return null;
+            if (NowFloor == 0) {
+                NowSlash.options ??= new List<CommandOption>();
+                return NowSlash.options;
+            }
+            else if (NowFloor > 0 && NowOption != null) {
+                NowOption.options ??= new List<CommandOption>();
+                return NowOption.options;
+            }
+            return null;
+        }
+        private bool CanPasteOption(CommandOption pastedOption)
+        {
+            if (NowSlash == null) return false;
+            if (pastedOption == null) return false;
+            int pastedType = pastedOption.type;
+            var list = GetCurrentOptionList();
+            if (list == null) return false;
+
+            // 情況 1：最頂層
+            if (NowFloor == 0) {
+                if (list.Count == 0) {
+                    return true;
+                }
+                else {
+                    bool hasSubCommandOrGroup = list.Any(o => o.type == 1 || o.type == 2);
+                    bool hasParameter = list.Any(o => o.type >= 3);
+                    if (hasSubCommandOrGroup && !hasParameter)
+                        return pastedType == 1 || pastedType == 2;
+                    if (hasParameter && !hasSubCommandOrGroup)
+                        return pastedType >= 3;
+                    return false;
+                }
+            }
+            if (NowFloor == 1 && NowOption?.type == 2) {
+                return pastedType == 1;
+            }
+            if (NowFloor >= 1 && NowOption?.type == 1) {
+                return pastedType >= 3;
+            }
+            return false;
         }
         private void updateButton_Click(object sender, EventArgs e)
         {
@@ -851,12 +949,12 @@ namespace slash_commands_gui_tool
         }
         private async void SaveCommand()
         {
-            double time = discord.IsRequestAllowed(3000);
-            if (time != -1) {
-                toolStripStatusLabel1.Text = $"{Resource.SlowDown1}{string.Format("{0:F2}", time)}{Resource.SlowDown2}";
-                return;
-            }
             if (Status) {
+                double time = discord.IsRequestAllowed(1500);
+                if (time != -1) {
+                    toolStripStatusLabel1.Text = $"{Resource.SlowDown1}{string.Format("{0:F2}", time)}{Resource.SlowDown2}";
+                    return;
+                }
                 if (BotSlash == null) return;
                 SimpleSlash simple = BotSlash[SelectIndex];
                 if (NowSlash == null) return;
@@ -872,6 +970,9 @@ namespace slash_commands_gui_tool
             else {
                 LocalSave(false);
             }
+            NowFloor = 0;
+            pathIndex.Clear();
+            ResetOperation();
             toolStripStatusLabel1.Text = Resource.Saved;
             Changed = false;
         }
@@ -977,6 +1078,28 @@ namespace slash_commands_gui_tool
             }
             await LoadCommands();
             LoadLocalCommands();
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            if (BotSlash == null) return;
+            if (BotSlash.Length == 0) return;
+            string? id;
+            if (Status) {
+                if (listBox1.SelectedIndex == -1) return;
+                id = BotSlash[listBox1.SelectedIndex].id;
+            }
+            else {
+                if (listBox2.SelectedIndex == -1) return;
+                id = BotSlash[listBox1.SelectedIndex].id;
+            }
+            if (id == null) return;
+            if (select == null) return;
+            SlashCommand? slash = await discord.GetCommandAsync(select, id, toolStripProgressBar1);
+            if (slash == null) return;
+            string json = JsonConvert.SerializeObject(slash, Formatting.Indented);
+            MessageBox.Show($"已複製選項：{slash.name}", "複製成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Clipboard.SetText(json);
         }
 
         private async void backupToLocal_Click(object sender, EventArgs e)
@@ -1218,6 +1341,7 @@ namespace slash_commands_gui_tool
             localizationButton1.Location = new Point(groupBox3.Width - localizationButton1.Width - GetSP(6), groupBox5.Height + GetSP(22));
             localizationButton2.Location = new Point(groupBox3.Width - localizationButton2.Width - GetSP(6), groupBox5.Height + cmdnameTextbox.Height + GetSP(62));
             updateButton.Location = new Point(groupBox3.Width - updateButton.Width - GetSP(6), updateButton.Location.Y);
+            button3.Location = new Point(groupBox4.Width - button3.Width - GetSP(6), button2.Location.Y);
         }
 
         private int GetSP(int value)

@@ -119,46 +119,43 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmdtypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 561</value>
+    <value>12, 300</value>
   </data>
   <data name="cmdtypeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 44</value>
+    <value>57, 25</value>
   </data>
   <data name="cmdtypeLabel.Text" xml:space="preserve">
     <value>类别:</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 565</value>
-  </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 34</value>
+    <value>75, 300</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 875</value>
+    <value>97, 358</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 27</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 26</value>
+    <value>103, 15</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>删除已选择的选项</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 523</value>
+    <value>12, 282</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 30</value>
+    <value>81, 18</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>添加新选项:</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 666</value>
+    <value>8, 400</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>459, 182</value>
+    <value>263, 105</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>规则:
@@ -170,19 +167,22 @@
  使用参数指令！</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 608</value>
+    <value>12, 328</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 44</value>
+    <value>57, 25</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>名称:</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 615</value>
+    <value>75, 329</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 34</value>
+    <value>196, 23</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>276, 512</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

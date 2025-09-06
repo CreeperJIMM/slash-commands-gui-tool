@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="AutoSyncStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 34</value>
+    <value>100, 23</value>
   </data>
   <data name="AutoSyncStripMenuItem.Text" xml:space="preserve">
     <value>✅ 自动存挡 (&amp;S)</value>
@@ -128,103 +128,103 @@
     <value />
   </data>
   <data name="newClientToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 34</value>
+    <value>100, 23</value>
   </data>
   <data name="newClientToolStripMenuItem.Text" xml:space="preserve">
     <value>创建客户端 (&amp;N)</value>
   </data>
   <data name="oToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 34</value>
+    <value>86, 23</value>
   </data>
   <data name="oToolStripMenuItem.Text" xml:space="preserve">
     <value>命令管理 (&amp;C)</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 34</value>
+    <value>64, 23</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
     <value>设置 (&amp;O)</value>
   </data>
   <data name="aboutIToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 34</value>
+    <value>62, 23</value>
   </data>
   <data name="aboutIToolStripMenuItem.Text" xml:space="preserve">
     <value>关于 (&amp;A)</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 40</value>
+    <value>118, 22</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>启用 (&amp;E)</value>
   </data>
   <data name="disableDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 40</value>
+    <value>118, 22</value>
   </data>
   <data name="disableDToolStripMenuItem.Text" xml:space="preserve">
     <value>停用 (&amp;D)</value>
   </data>
   <data name="backupBotToLocalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 40</value>
+    <value>212, 22</value>
   </data>
   <data name="backupBotToLocalToolStripMenuItem.Text" xml:space="preserve">
     <value>备份机器人命令至本地 (&amp;B)</value>
   </data>
   <data name="copyAllLocalToBotToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 40</value>
+    <value>212, 22</value>
   </data>
   <data name="copyAllLocalToBotToolStripMenuItem.Text" xml:space="preserve">
     <value>推送本地命令到机器人 (&amp;P)</value>
   </data>
   <data name="localCommandSaveFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 40</value>
+    <value>212, 22</value>
   </data>
   <data name="localCommandSaveFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>开启本地指令资料夹 (&amp;S)</value>
   </data>
   <data name="languagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 40</value>
+    <value>141, 22</value>
   </data>
   <data name="languagesToolStripMenuItem.Text" xml:space="preserve">
     <value>介面语言 (&amp;L)</value>
   </data>
   <data name="uIThemeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 40</value>
+    <value>141, 22</value>
   </data>
   <data name="uIThemeToolStripMenuItem.Text" xml:space="preserve">
     <value>介面主题 (&amp;T)</value>
   </data>
   <data name="systemSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 40</value>
+    <value>140, 22</value>
   </data>
   <data name="systemSToolStripMenuItem.Text" xml:space="preserve">
     <value>跟随系统 (&amp;S)</value>
   </data>
   <data name="whiteWToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 40</value>
+    <value>140, 22</value>
   </data>
   <data name="whiteWToolStripMenuItem.Text" xml:space="preserve">
     <value>浅色 (&amp;W)</value>
   </data>
   <data name="darkDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 40</value>
+    <value>140, 22</value>
   </data>
   <data name="darkDToolStripMenuItem.Text" xml:space="preserve">
     <value>深色 (D)</value>
   </data>
   <data name="othersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 40</value>
+    <value>141, 22</value>
   </data>
   <data name="othersToolStripMenuItem.Text" xml:space="preserve">
     <value>进阶选项 (&amp;A)</value>
   </data>
   <data name="resetAppliToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 40</value>
+    <value>182, 22</value>
   </data>
   <data name="resetAppliToolStripMenuItem.Text" xml:space="preserve">
     <value>重设资料库</value>
   </data>
   <data name="clearApplicationsAndCloseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 40</value>
+    <value>182, 22</value>
   </data>
   <data name="clearApplicationsAndCloseToolStripMenuItem.Text" xml:space="preserve">
     <value>清除本地资料并退出</value>
@@ -245,7 +245,7 @@
     <value>Discord机器人已存在的</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 26</value>
+    <value>55, 15</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>斜杠命令</value>
@@ -260,7 +260,7 @@
     <value>编辑选项             </value>
   </data>
   <data name="cmdtypeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 44</value>
+    <value>57, 25</value>
   </data>
   <data name="cmdtypeLabel.Text" xml:space="preserve">
     <value>类别:</value>
@@ -272,13 +272,13 @@
     <value>编辑选择       </value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 46</value>
+    <value>105, 28</value>
   </data>
   <data name="checkBox2.Text" xml:space="preserve">
     <value>自动完成</value>
   </data>
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 46</value>
+    <value>105, 28</value>
   </data>
   <data name="checkBox1.Text" xml:space="preserve">
     <value>必填选项</value>
@@ -287,25 +287,28 @@
     <value>进入选择的选项</value>
   </data>
   <data name="cmdoptionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 44</value>
+    <value>72, 25</value>
   </data>
   <data name="cmdoptionLabel.Text" xml:space="preserve">
     <value>选项：</value>
   </data>
   <data name="cmddescLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 44</value>
+    <value>72, 25</value>
   </data>
   <data name="cmddescLabel.Text" xml:space="preserve">
     <value>简介：</value>
   </data>
   <data name="cmdnameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 44</value>
+    <value>72, 25</value>
   </data>
   <data name="cmdnameLabel.Text" xml:space="preserve">
     <value>名称：</value>
   </data>
   <data name="groupBox4.Text" xml:space="preserve">
     <value>已选泽的斜杠命令操作</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>复制到剪贴簿</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
     <value>复制命令到...</value>

@@ -13,7 +13,7 @@
 	<SelfContained>true</SelfContained>
 	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
 	<GenerateSatelliteAssembliesForCore>true</GenerateSatelliteAssembliesForCore>
-	<DebugType>none</DebugType>
+
 	<ApplicationIcon>$this.Icon.ico</ApplicationIcon>
   </PropertyGroup>
 
@@ -31,7 +31,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
-    <PackageReference Include="System.Drawing.Common" Version="9.0.5" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>

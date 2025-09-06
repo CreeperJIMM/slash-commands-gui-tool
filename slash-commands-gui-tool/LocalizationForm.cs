@@ -90,6 +90,7 @@ namespace slash_commands_gui_tool
         private void Add_Click(object sender, EventArgs e)
         {
             if(nowlang.Count <= 0) return;
+            if (checkTextbox() == false) return;
             int index = comboBox1.SelectedIndex;
             Language lang = nowlang[index];
             if (lang.locale == null) return;
@@ -105,18 +106,26 @@ namespace slash_commands_gui_tool
         //關閉視窗檢查
         private void LocalizationForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (checkTextbox() == false) {
+                e.Cancel = true;
+                return;
+            }
+            if (Changed) this.DialogResult = DialogResult.OK;
+            else this.DialogResult = DialogResult.Cancel;
+        }
+        private bool checkTextbox()
+        {
             GP[] gps = groups.ToArray();
             for (int i = 0; i < gps.Length; i++) {
                 GP gp = gps[i];
                 Button? button = gp.Button;
-                if (button.Tag == null) return;
+                if (button.Tag == null) return false;
                 string locale = (string)button.Tag;
                 string txt = gp.TextBox.Text.Trim();
                 if (string.IsNullOrWhiteSpace(txt)) {
                     DialogResult dialog = MessageBox.Show($"{Resource.NameEmpty}\n\nError: {locale}", Resource.Warning, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     if (dialog == DialogResult.OK) {
-                        e.Cancel = true;
-                        return;
+                        return false;
                     }
                     else Changed = false;
                 }
@@ -125,16 +134,14 @@ namespace slash_commands_gui_tool
                     if (!isValid) {
                         DialogResult dialog = MessageBox.Show($"{Resource.Nameillegal2}\n\nError: {locale}", Resource.Warning, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                         if (dialog == DialogResult.OK) {
-                            e.Cancel = true;
-                            return;
+                            return false;
                         }
                         else Changed = false;
                     }
                     if (txt.Length > 32) {
                         DialogResult dialog = MessageBox.Show($"{Resource.WordLimit1} 1~32 {Resource.WordLimit2}\n\nError: {locale}", Resource.Warning, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                         if (dialog == DialogResult.OK) {
-                            e.Cancel = true;
-                            return;
+                            return false;
                         }
                         else Changed = false;
                     }
@@ -143,16 +150,14 @@ namespace slash_commands_gui_tool
                     if (txt.Length > 100) {
                         DialogResult dialog = MessageBox.Show($"{Resource.WordLimit1} 1~100 {Resource.WordLimit2}\n\nError: {locale}", Resource.Warning, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                         if (dialog == DialogResult.OK) {
-                            e.Cancel = true;
-                            return;
+                            return false;
                         }
                         else Changed = false;
                     }
                 }
                 localization[locale] = txt;
             }
-            if (Changed) this.DialogResult = DialogResult.OK;
-            else this.DialogResult = DialogResult.Cancel;
+            return true;
         }
 
         private void UpdateData(EventArgs e, bool up)
@@ -252,6 +257,10 @@ namespace slash_commands_gui_tool
         [
             new Language("en-US", "English(US)", "English, US"),
             new Language("en-GB", "English(UK)", "English, UK"),
+            new Language("ja", "Japanese", "日本語"),
+            new Language("zh-TW", "Chinese(Taiwan)", "繁體中文"),
+            new Language("zh-CN", "Chinese(China)", "中文"),
+            new Language("ko", "Korean", "한국어"),
             new Language("es-ES", "Spanish", "Español"),
             new Language("es-419", "Spanish, LATAM", "Español, LATAM"),
             new Language("id", "Indonesian", "Bahasa Indonesia"),
@@ -277,11 +286,7 @@ namespace slash_commands_gui_tool
             new Language("ru", "Russian", "Pусский"),
             new Language("uk", "Ukrainian", "Українська"),
             new Language("hi", "Hindi", "हिन्दी"),
-            new Language("th", "Thai", "ไทย"),
-            new Language("ja", "Japanese", "日本語"),
-            new Language("zh-CN", "Chinese(China)", "中文"),
-            new Language("zh-TW", "Chinese(Taiwan)", "繁體中文"),
-            new Language("ko", "Korean", "한국어")
+            new Language("th", "Thai", "ไทย")
         ];
     }
 }

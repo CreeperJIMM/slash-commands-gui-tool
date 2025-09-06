@@ -70,21 +70,25 @@ namespace slash_commands_gui_tool
 
         private void addOption_click(object sender, EventArgs e)
         {
+            addNewOption(false);
+        }
+        private void addNewOption(bool IsKey)
+        {
             if (comboBox1.SelectedIndex == -1) return;
             if (string.IsNullOrWhiteSpace(textBox1.Text)) {
-                MessageBox.Show(Resource.NameEmpty, Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (!IsKey) MessageBox.Show(Resource.NameEmpty, Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             bool isValid = Regex.IsMatch(textBox1.Text, @"^[a-z0-9_-]+$");
             if (!isValid) {
-                MessageBox.Show(Resource.Nameillegal, Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if(!IsKey) MessageBox.Show(Resource.Nameillegal, Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string txt = Regex.Replace(textBox1.Text, @"\s+", "");
             CommandOption? same = null;
             if (options != null) same = options.Find(m => m.name == txt);
             if (same != null) {
-                MessageBox.Show(Resource.NameExist, Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (!IsKey) MessageBox.Show(Resource.NameExist, Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             CommandOption option = new CommandOption(types[comboBox1.SelectedIndex].value, txt, "-");
@@ -121,6 +125,19 @@ namespace slash_commands_gui_tool
                 return true;
             }
             return flag;
+        }
+
+        private void KeyEvent(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) {
+                addNewOption(true);
+            }else if (e.KeyCode == Keys.Delete) {
+                if (listBox1.SelectedIndex != -1) {
+                    options?.RemoveAt(listBox1.SelectedIndex);
+                    UpdateListbox();
+                    Changed = true;
+                }
+            }
         }
     }
 }

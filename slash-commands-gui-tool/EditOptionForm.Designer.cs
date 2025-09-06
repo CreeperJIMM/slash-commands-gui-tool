@@ -114,11 +114,13 @@
             Controls.Add(comboBox1);
             Controls.Add(listBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            KeyPreview = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "EditOptionForm";
             FormClosing += EditOptionForm_FormClosing;
             Load += EditOptionForm_Load;
+            KeyDown += KeyEvent;
             ResumeLayout(false);
             PerformLayout();
         }
