@@ -46,8 +46,8 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Images.discordtool;
             resources.ApplyResources(pictureBox1, "pictureBox1");
+            pictureBox1.Image = Images.discordtool;
             pictureBox1.Name = "pictureBox1";
             pictureBox1.TabStop = false;
             // 
@@ -70,8 +70,8 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Images.avatar_ring;
             resources.ApplyResources(pictureBox2, "pictureBox2");
+            pictureBox2.Image = Images.avatar_ring;
             pictureBox2.Name = "pictureBox2";
             pictureBox2.TabStop = false;
             // 
@@ -125,7 +125,7 @@
             // AboutForm
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Dpi;
             Controls.Add(label5);
             Controls.Add(button3);
             Controls.Add(button2);

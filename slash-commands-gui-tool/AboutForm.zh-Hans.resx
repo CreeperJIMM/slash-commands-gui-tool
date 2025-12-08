@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 42</value>
+    <value>197, 24</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>由 CreeperJIMM 制作</value>
@@ -128,13 +128,13 @@
     <value>了解了 (&amp;C)</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 42</value>
+    <value>124, 24</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>黑暗模式来源</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 42</value>
+    <value>86, 24</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>灵感来源</value>

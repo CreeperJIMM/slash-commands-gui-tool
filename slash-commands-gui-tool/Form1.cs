@@ -815,7 +815,11 @@ namespace slash_commands_gui_tool
         }
         private async void reloadButton_ClickAsync(object sender, EventArgs e)
         {
-            if (NowSlash == null) return;
+            await ClickAsync();
+        }
+        private async Task<bool> ClickAsync()
+        {
+            if (NowSlash == null) return false;
             LoadClients();
             await VerityValidClientAsync();
             await LoadCommands();
@@ -827,11 +831,12 @@ namespace slash_commands_gui_tool
             label1.Visible = false;
             groupBox4.Enabled = false;
             groupBox3.Visible = false;
+            return true;
         }
         private DateTime KeyCooldown = DateTime.MinValue;
         //熱鍵功能
         CommandOption copiedOption;
-        private void KeyEvent(object sender, KeyEventArgs e)
+        private async void KeyEvent(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.S && Changed) {
                 SaveCommand();
@@ -897,6 +902,23 @@ namespace slash_commands_gui_tool
                 listBox3.SelectedIndex = listBox3.Items.Count - 1;
                 Changed = true;
                 MessageBox.Show($"已貼上選項：{pasted.name}", "貼上成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } 
+            else if(e.Control && e.KeyCode == Keys.E) {
+                if(addoptionButton.Visible && addoptionButton.Enabled && NowSlash != null) editOptionButton(sender, e);
+            }
+            else if (e.KeyCode == Keys.F5) {
+                await ClickAsync();
+            } 
+            else if (e.KeyCode == Keys.F1) {
+                AboutForm about = new AboutForm();
+                about.StartPosition = FormStartPosition.CenterParent;
+                about.ShowDialog();
+            } 
+            else if (e.KeyCode == Keys.F2) {
+                if(cmdnameTextbox.Enabled && NowSlash != null) {
+                    cmdnameTextbox.Focus();
+                    cmdnameTextbox.SelectAll();
+                }
             }
         }
         private List<CommandOption>? GetCurrentOptionList()

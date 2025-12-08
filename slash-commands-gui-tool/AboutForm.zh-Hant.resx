@@ -118,29 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 139</value>
-  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 42</value>
+    <value>197, 24</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>由 CreeperJIMM 製作</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 89</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>了解了！</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 42</value>
+    <value>124, 24</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>深色模式來自</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 42</value>
+    <value>124, 24</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>靈感來源來自</value>
@@ -152,9 +146,6 @@
   <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 89</value>
-  </data>
   <data name="button2.Text" xml:space="preserve">
     <value>查看原始碼</value>
   </data>
@@ -163,9 +154,6 @@
   </data>
   <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 89</value>
   </data>
   <data name="button3.Text" xml:space="preserve">
     <value>查看作者資訊</value>
