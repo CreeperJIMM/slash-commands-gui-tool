@@ -232,6 +232,18 @@
   <data name="groupBox2.Text" xml:space="preserve">
     <value>本地的斜槓指令</value>
   </data>
+  <data name="comboBox3.Items" xml:space="preserve">
+    <value>[1] 斜槓指令</value>
+  </data>
+  <data name="comboBox3.Items1" xml:space="preserve">
+    <value>[2 ]用戶指令</value>
+  </data>
+  <data name="comboBox3.Items2" xml:space="preserve">
+    <value>[3] 訊息指令</value>
+  </data>
+  <data name="comboBox3.Items3" xml:space="preserve">
+    <value>[4] 預啟動指令</value>
+  </data>
   <data name="savebutton.Text" xml:space="preserve">
     <value>儲存</value>
   </data>
@@ -240,6 +252,18 @@
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Discord機器人目前存在的</value>
+  </data>
+  <data name="comboBox2.Items" xml:space="preserve">
+    <value>[1] 斜槓指令</value>
+  </data>
+  <data name="comboBox2.Items1" xml:space="preserve">
+    <value>[2 ]用戶指令</value>
+  </data>
+  <data name="comboBox2.Items2" xml:space="preserve">
+    <value>[3] 訊息指令</value>
+  </data>
+  <data name="comboBox2.Items3" xml:space="preserve">
+    <value>[4] 預啟動指令</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 15</value>
@@ -264,6 +288,12 @@
   </data>
   <data name="groupBox6.Text" xml:space="preserve">
     <value>指令參數</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 24</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>成員權限:</value>
   </data>
   <data name="editchoiceButton.Text" xml:space="preserve">
     <value>編輯選項       </value>

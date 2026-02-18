@@ -148,6 +148,12 @@ Do you want to save your changes before switching?</value>
   <data name="ConnectionSuccessful" xml:space="preserve">
     <value>Connection Successful!</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy successful</value>
+  </data>
+  <data name="CopyCmd" xml:space="preserve">
+    <value>This command has been copied:</value>
+  </data>
   <data name="DeleDatabase" xml:space="preserve">
     <value>Are you sure you want to reset the database? This will delete all stored client data!</value>
   </data>

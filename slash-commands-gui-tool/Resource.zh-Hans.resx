@@ -148,6 +148,12 @@
   <data name="ConnectionSuccessful" xml:space="preserve">
     <value>联线成功！</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>复制成功！</value>
+  </data>
+  <data name="CopyCmd" xml:space="preserve">
+    <value>已复制此指令：</value>
+  </data>
   <data name="DeleDatabase" xml:space="preserve">
     <value>您确定要重置资料库吗？这将删除所有已储存的客户端资料！</value>
   </data>

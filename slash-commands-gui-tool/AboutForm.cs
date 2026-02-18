@@ -13,6 +13,7 @@ namespace slash_commands_gui_tool
             InitializeComponent();
         }
 
+        static private readonly string _Version = "1.3";
         private void AboutForm_Load(object sender, EventArgs e)
         {
             if (Environment.Is64BitProcess) {
@@ -21,6 +22,7 @@ namespace slash_commands_gui_tool
             else {
                 label5.Text += " 32 bit";
             }
+            label5.Text = label5.Text.Replace("X", _Version);
         }
 
         private void button1_Click(object sender, EventArgs e)

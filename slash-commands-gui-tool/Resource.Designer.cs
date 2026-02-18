@@ -152,6 +152,24 @@ namespace slash_commands_gui_tool {
         }
         
         /// <summary>
+        ///   查詢類似 Copy successful 的當地語系化字串。
+        /// </summary>
+        internal static string Copy {
+            get {
+                return ResourceManager.GetString("Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 This command has been copied: 的當地語系化字串。
+        /// </summary>
+        internal static string CopyCmd {
+            get {
+                return ResourceManager.GetString("CopyCmd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查詢類似 Are you sure you want to reset the database? This will delete all stored client data! 的當地語系化字串。
         /// </summary>
         internal static string DeleDatabase {

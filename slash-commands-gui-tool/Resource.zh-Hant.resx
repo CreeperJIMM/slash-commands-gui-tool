@@ -148,6 +148,12 @@
   <data name="ConnectionSuccessful" xml:space="preserve">
     <value>連線成功！</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>複製成功!</value>
+  </data>
+  <data name="CopyCmd" xml:space="preserve">
+    <value>已複製此指令：</value>
+  </data>
   <data name="DeleDatabase" xml:space="preserve">
     <value>您確定要重置資料庫嗎？這將刪除所有已儲存的客戶端資料！</value>
   </data>

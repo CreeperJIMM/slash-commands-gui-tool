@@ -1189,12 +1189,14 @@ namespace slash_commands_gui_tool
                 Formatting = Formatting.Indented
             };
             string json = JsonConvert.SerializeObject(slash, settings);
-            MessageBox.Show($"已複製選項：{slash.name}", "複製成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"{Resource.CopyCmd} {slash.name}", Resource.Copy, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Clipboard.SetText(json);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
+            if (NowSlash == null) return;
+            if (!Operation) return;
             NowSlash.default_member_permissions = (ulong)numericUpDown1.Value;
             Changed = true;
         }
@@ -1212,7 +1214,7 @@ namespace slash_commands_gui_tool
                 Changed = true;
             else
                 NowSlash.default_member_permissions = cache;
-            numericUpDown1.Value = (ulong)NowSlash.default_member_permissions;
+            if (NowSlash != null && NowSlash.default_member_permissions != null) numericUpDown1.Value = (ulong)NowSlash.default_member_permissions;
         }
 
         private async void backupToLocal_Click(object sender, EventArgs e)

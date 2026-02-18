@@ -27,27 +27,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PermissionForm));
             groupBox1 = new GroupBox();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Location = new Point(4, 3);
+            resources.ApplyResources(groupBox1, "groupBox1");
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(608, 539);
-            groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             // 
             // PermissionForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(617, 577);
             Controls.Add(groupBox1);
             Name = "PermissionForm";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "Bot Permission";
-            FormClosing += this.PermissionForm_FormClosing;
+            FormClosing += PermissionForm_FormClosing;
             Load += Permission_Load;
             ResumeLayout(false);
         }

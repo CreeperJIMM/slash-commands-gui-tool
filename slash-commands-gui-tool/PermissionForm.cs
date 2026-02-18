@@ -37,7 +37,6 @@ namespace slash_commands_gui_tool
 
         private void GeneratePermissionsUI(ulong initialValue)
         {
-            // 1. 初始化容器
             groupBox1.Controls.Clear();
             _allCheckBoxes.Clear();
 
@@ -51,7 +50,6 @@ namespace slash_commands_gui_tool
             table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3f));
             table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3f));
 
-            // 2. 建立三排面板
             var flowGeneral = CreateSubPanel("一般權限 (General)");
             var flowText = CreateSubPanel("文字權限 (Text)");
             var flowVoice = CreateSubPanel("語音權限 (Voice)");
@@ -61,11 +59,12 @@ namespace slash_commands_gui_tool
             table.Controls.Add(flowVoice, 2, 0);
             groupBox1.Controls.Add(table);
             
-            // 3. 生成 CheckBox 並存入 List
             foreach (var perm in DiscordPermissionData.AllPermissions) {
                 ulong bitmask = 1UL << perm.BitOffset;
+                string name = perm.Name;
+                if (Form1.USER_LANGUAGE == "zh-Hant" || Form1.USER_LANGUAGE == "zh-Hans") name = perm.LocalizedName;
                 CheckBox cb = new CheckBox {
-                    Text = perm.LocalizedName,
+                    Text = name,
                     Tag = perm.BitOffset,
                     AutoSize = true,
                     Margin = new Padding(3, 5, 3, 5),
@@ -86,7 +85,7 @@ namespace slash_commands_gui_tool
             }
 
             _lblResult = new Label {
-                Text = "權限數值 (Permissions Integer): 0",
+                Text = "權限值 (Permissions): 0",
                 Dock = DockStyle.Bottom,
                 Font = new Font("Consolas", 11, FontStyle.Bold),
                 Height = 40,
@@ -117,7 +116,7 @@ namespace slash_commands_gui_tool
                     total |= (1UL << offset);
                 }
             }
-            _lblResult.Text = $"權限數值 (Permissions Integer): {total}";
+            _lblResult.Text = $"權限數值 (Permissions): {total}";
             Form1.NowSlash.default_member_permissions = total;
             Changed = true;
         }

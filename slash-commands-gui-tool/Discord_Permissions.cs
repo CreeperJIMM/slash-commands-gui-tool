@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Discord_Permissions
 {
-    // 1. 在結構中增加 LocalizedName (中文翻譯)
     public record PermissionItem(string Name, string LocalizedName, string Category, int BitOffset)
     {
         public ulong Value => 1UL << BitOffset;
