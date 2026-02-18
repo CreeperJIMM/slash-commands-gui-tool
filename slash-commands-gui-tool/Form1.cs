@@ -1,13 +1,14 @@
-using System.Globalization;
-using DiscordAPI;
-using SQLite;
 using ConfigRW;
-using ThemeSW;
+using DiscordAPI;
 using LocalFileRW;
-using System.Text.RegularExpressions;
-using System.Diagnostics;
-using System.Windows.Forms;
 using Newtonsoft.Json;
+using SQLite;
+using System;
+using System.Diagnostics;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using ThemeSW;
 
 namespace slash_commands_gui_tool
 {
@@ -105,7 +106,9 @@ namespace slash_commands_gui_tool
         {
             button1.Enabled = false;
             groupBox1.Enabled = false;
+            comboBox2.SelectedIndex = comboBox3.SelectedIndex = 0;
             clients = new List<Client>(sql.GetClients());
+            if (clients == null) return;
             clients.AddRange(caches);
             toolStripComboBox1.Items.Clear();
             if (clients.Count > 0) {
@@ -178,14 +181,14 @@ namespace slash_commands_gui_tool
             BotSlash = list;
             BotCache = new List<SlashCommand>();
             foreach (SimpleSlash slash in list) {
-                listBox1.Items.Add($"{slash.name}");
+                listBox1.Items.Add($"[{slash.type}] {slash.name}");
             }
         }
         private void LoadLocalCommands()
         {
             listBox2.Items.Clear();
             foreach (SlashCommand slash in LocalCache) {
-                listBox2.Items.Add($"{slash.name}");
+                listBox2.Items.Add($"[{slash.type}] {slash.name}");
             }
         }
 
@@ -202,10 +205,14 @@ namespace slash_commands_gui_tool
             pathIndex.Clear();
             UpdateCommand(slash);
             checkBox3.Visible = true;
+            label3.Visible = true;
+            numericUpDown1.Visible = true;
+            permission_button.Visible = true;
             return slash;
         }
         private void UpdateCommand(SlashCommand slash)
         {
+            Operation = false;
             groupBox5.Controls.Clear();
             LinkLabel label = new LinkLabel();
             label.AutoSize = true;
@@ -218,9 +225,16 @@ namespace slash_commands_gui_tool
             cmdnameTextbox.Text = lastname = slash.name;
             cmdnameTextbox.ReadOnly = true;
             cmddescTextbox.Text = lastdesc = slash.description;
+            if (slash.default_member_permissions != null)
+                numericUpDown1.Value = (ulong)slash.default_member_permissions;
+            else
+                numericUpDown1.Value = 0;
             checkBox1.Visible = false;
             checkBox2.Visible = false;
             checkBox3.Visible = true;
+            label3.Visible = true;
+            numericUpDown1.Visible = true;
+            permission_button.Visible = true;
             editchoiceButton.Visible = false;
             if (slash.nsfw != null) checkBox3.Checked = (bool)slash.nsfw;
             listBox3.Items.Clear();
@@ -230,12 +244,12 @@ namespace slash_commands_gui_tool
                     listBox3.Items.Add($"[{slash.options[i].type}] {slash.options[i].name}");
                 }
             }
-            UpdateType(slash, slash.type, true);
+            UpdateType(slash, slash.type);
+            Operation = true;
         }
         List<CommandType> tps;
-        private void UpdateType(SlashCommand slash, int value, bool locked)
+        private void UpdateType(SlashCommand slash, int value)
         {
-            comboBox1.Items.Clear();
             List<CommandOption> options = GetPreviousOptions();
             int t = 0;
             t = slash.type;
@@ -261,16 +275,20 @@ namespace slash_commands_gui_tool
                 if (NowFloor == 2) {
                     tps.Remove(types[1]);
                 }
+                foreach (CommandType type in tps) {
+                    string patten = "";
+                    if (type.choice) patten = "*";
+                    comboBox1.Items.Add($"[{type.value}] {type.name}{patten}");
+                }
+                int index = tps.FindIndex(m => m.value == value);
+                if (index != -1) comboBox1.SelectedIndex = index;
             }
-            foreach (CommandType type in tps) {
-                string patten = "";
-                if (type.choice) patten = "*";
-                comboBox1.Items.Add($"[{type.value}] {type.name}{patten}");
+            else {
+                foreach (Command type in commandType) {
+                    comboBox1.Items.Add($"[{type.value}] {type.name}");
+                }
+                if (NowSlash != null) comboBox1.SelectedIndex = NowSlash.type - 1;
             }
-            int index = tps.FindIndex(m => m.value == value);
-            if (index != -1) comboBox1.SelectedIndex = index;
-            if (locked) comboBox1.Enabled = false;
-            else comboBox1.Enabled = true;
         }
         private bool IsHasSubCommnad(List<CommandOption> options)
         {
@@ -421,8 +439,11 @@ namespace slash_commands_gui_tool
                     if (BotSlash == null) return;
                     SimpleSlash simple = BotSlash[SelectIndex];
                     SlashCommand? slash = await LoadSingleCommandAsync(simple);
+                    if (slash == null) return;
                     NowSlash = slash;
                     pathIndex.Clear();
+                    UpdateCommand(slash);
+
                 }
                 else {
                     SlashCommand slash = LocalCache[SelectIndex];
@@ -430,6 +451,7 @@ namespace slash_commands_gui_tool
                     pathIndex.Clear();
                     UpdateCommand(slash);
                 }
+                UpdateCommnadType();
             }
             else {
                 NowSlash = null;
@@ -447,7 +469,7 @@ namespace slash_commands_gui_tool
         }
         private void ResetOperation()
         {
-            Operation = false;
+            Operation = true;
             plusbutton1.Enabled = true;
             minusbutton1.Enabled = true;
             groupBox3.Visible = true;
@@ -457,6 +479,9 @@ namespace slash_commands_gui_tool
             checkBox2.Visible = false;
             checkBox3.Visible = true;
             editchoiceButton.Visible = false;
+            label3.Visible = true;
+            numericUpDown1.Visible = true;
+            permission_button.Visible = true;
             label1.Visible = false;
             Changed = false;
             NowFloor = 0;
@@ -501,10 +526,16 @@ namespace slash_commands_gui_tool
                 Operation = true;
                 return;
             }
+
             NowFloor++;
             int[] path = pathIndex.ToArray();
             int index = listBox3.SelectedIndex;
-            checkBox3.Visible = false;
+            if(enter > 0) {
+                label3.Visible = false;
+                numericUpDown1.Visible = false;
+                permission_button.Visible = false;
+                checkBox3.Visible = false;
+            }
             if (NowOption != null) {
                 if (NowOption.type != 1 && NowOption.type != 2) {
                     checkBox1.Visible = true;
@@ -641,7 +672,7 @@ namespace slash_commands_gui_tool
             if (option.type > 2) addoptionButton.Enabled = false;
             else addoptionButton.Enabled = true;
             UpdateParameter(option);
-            if (NowSlash != null) UpdateType(NowSlash, option.type, false);
+            if (NowSlash != null) UpdateType(NowSlash, option.type);
             return label.Width;
         }
         private void UpdateParameter(CommandOption option)
@@ -742,7 +773,6 @@ namespace slash_commands_gui_tool
         }
         private void plusbutton_Click(object sender, EventArgs e)
         {
-
             Button? button = sender as Button;
             if (button == null || button.Tag == null) return;
             plusButton_Event((string)button.Tag);
@@ -763,8 +793,8 @@ namespace slash_commands_gui_tool
                 Status = true;
                 SlashCommand slash = new SlashCommand();
                 slash.name = textBox1.Text;
-                slash.description = "-";
-                slash.type = 1;
+                slash.type = comboBox2.SelectedIndex + 1;
+                if (slash.type == 1) slash.description = "-";
                 slash.nsfw = false;
                 if (select == null) return;
                 await discord.PostCommandAsync(select, slash, toolStripProgressBar1);
@@ -784,8 +814,8 @@ namespace slash_commands_gui_tool
                 Status = false;
                 SlashCommand slash = new SlashCommand();
                 slash.name = textBox2.Text;
-                slash.description = "-";
-                slash.type = 1;
+                slash.type = comboBox3.SelectedIndex + 1;
+                if (slash.type == 1) slash.description = "-";
                 slash.nsfw = false;
                 LocalCache.Add(slash);
                 LoadLocalCommands();
@@ -807,10 +837,13 @@ namespace slash_commands_gui_tool
                 NowSlash = null;
             }
             else if ((string)button.Tag == "Local" && !Status) {
-                LocalCache.Remove(NowSlash);
+                int index = listBox2.SelectedIndex;
+                if (index == -1) return;
+                LocalCache.RemoveAt(index);
                 LoadLocalCommands();
                 IsSave = false;
             }
+            else return;
             groupBox3.Visible = false;
         }
         private async void reloadButton_ClickAsync(object sender, EventArgs e)
@@ -831,6 +864,7 @@ namespace slash_commands_gui_tool
             label1.Visible = false;
             groupBox4.Enabled = false;
             groupBox3.Visible = false;
+            Changed = false;
             return true;
         }
         private DateTime KeyCooldown = DateTime.MinValue;
@@ -902,20 +936,20 @@ namespace slash_commands_gui_tool
                 listBox3.SelectedIndex = listBox3.Items.Count - 1;
                 Changed = true;
                 MessageBox.Show($"已貼上選項：{pasted.name}", "貼上成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } 
-            else if(e.Control && e.KeyCode == Keys.E) {
-                if(addoptionButton.Visible && addoptionButton.Enabled && NowSlash != null) editOptionButton(sender, e);
+            }
+            else if (e.Control && e.KeyCode == Keys.E) {
+                if (addoptionButton.Visible && addoptionButton.Enabled && NowSlash != null) editOptionButton(sender, e);
             }
             else if (e.KeyCode == Keys.F5) {
                 await ClickAsync();
-            } 
+            }
             else if (e.KeyCode == Keys.F1) {
                 AboutForm about = new AboutForm();
                 about.StartPosition = FormStartPosition.CenterParent;
                 about.ShowDialog();
-            } 
+            }
             else if (e.KeyCode == Keys.F2) {
-                if(cmdnameTextbox.Enabled && NowSlash != null) {
+                if (cmdnameTextbox.Enabled && NowSlash != null) {
                     cmdnameTextbox.Focus();
                     cmdnameTextbox.SelectAll();
                 }
@@ -971,6 +1005,10 @@ namespace slash_commands_gui_tool
         }
         private async void SaveCommand()
         {
+            NowFloor = 0;
+            pathIndex.Clear();
+            ResetOperation();
+            EnterOption(0);
             if (Status) {
                 double time = discord.IsRequestAllowed(1500);
                 if (time != -1) {
@@ -988,13 +1026,11 @@ namespace slash_commands_gui_tool
                 }
                 BotCache.Remove(NowSlash);
                 await LoadSingleCommandAsync(simple);
+                await LoadCommands();
             }
             else {
                 LocalSave(false);
             }
-            NowFloor = 0;
-            pathIndex.Clear();
-            ResetOperation();
             toolStripStatusLabel1.Text = Resource.Saved;
             Changed = false;
         }
@@ -1048,21 +1084,47 @@ namespace slash_commands_gui_tool
                 Changed = true;
             }
         }
+
+        private void UpdateCommnadType()
+        {
+            if (NowSlash == null) return;
+            if (NowSlash.type == 1) {
+                addoptionButton.Enabled = true;
+                listBox3.Enabled = true;
+                button4.Enabled = true;
+                cmddescTextbox.Enabled = true;
+                localizationButton2.Enabled = true;
+            }
+            else {
+                addoptionButton.Enabled = false;
+                listBox3.Enabled = false;
+                button4.Enabled = false;
+                cmddescTextbox.Enabled = false;
+                localizationButton2.Enabled = false;
+            }
+        }
+
         private void TypeChangedEvent(object sender, EventArgs e)
         {
             if (!Operation) return;
             if (NowSlash == null) return;
             if (comboBox1.SelectedIndex == -1) return;
-            int type = tps[comboBox1.SelectedIndex].value;
-            if (NowOption == null) NowSlash.type = type;
+            if (NowOption == null) {
+                NowSlash.type = commandType[comboBox1.SelectedIndex].value;
+                Operation = false;
+                UpdateCommnadType();
+                Operation = true;
+            }
             else {
-                NowOption.type = type;
+                NowOption.type = tps[comboBox1.SelectedIndex].value;
                 Operation = false;
                 UpdateParameter(NowOption);
                 Operation = true;
             }
             Changed = true;
         }
+
+
 
         private async void button2_Click(object sender, EventArgs e)
         {
@@ -1107,21 +1169,50 @@ namespace slash_commands_gui_tool
             if (BotSlash == null) return;
             if (BotSlash.Length == 0) return;
             string? id;
+            SlashCommand? slash;
+            
+            if (select == null) return;
             if (Status) {
                 if (listBox1.SelectedIndex == -1) return;
                 id = BotSlash[listBox1.SelectedIndex].id;
+                if (id == null) return;
+                slash = await discord.GetCommandAsync(select, id, toolStripProgressBar1);
             }
             else {
                 if (listBox2.SelectedIndex == -1) return;
-                id = BotSlash[listBox1.SelectedIndex].id;
+                slash = LocalCache[listBox2.SelectedIndex];
             }
-            if (id == null) return;
-            if (select == null) return;
-            SlashCommand? slash = await discord.GetCommandAsync(select, id, toolStripProgressBar1);
             if (slash == null) return;
-            string json = JsonConvert.SerializeObject(slash, Formatting.Indented);
+            if (slash.type != 1) slash.description = null;
+            JsonSerializerSettings settings = new JsonSerializerSettings {
+                NullValueHandling = NullValueHandling.Ignore,
+                Formatting = Formatting.Indented
+            };
+            string json = JsonConvert.SerializeObject(slash, settings);
             MessageBox.Show($"已複製選項：{slash.name}", "複製成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Clipboard.SetText(json);
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            NowSlash.default_member_permissions = (ulong)numericUpDown1.Value;
+            Changed = true;
+        }
+
+        private void permission_button_Click(object sender, EventArgs e)
+        {
+            Button? button = sender as Button;
+            if (button == null) return;
+            PermissionForm form = new PermissionForm();
+            form.StartPosition = FormStartPosition.CenterParent;
+            if (NowSlash == null) return;
+            ulong? cache = NowSlash.default_member_permissions;
+            DialogResult result = form.ShowDialog();
+            if (result == DialogResult.OK)
+                Changed = true;
+            else
+                NowSlash.default_member_permissions = cache;
+            numericUpDown1.Value = (ulong)NowSlash.default_member_permissions;
         }
 
         private async void backupToLocal_Click(object sender, EventArgs e)
@@ -1343,8 +1434,10 @@ namespace slash_commands_gui_tool
             groupBox1.Height = Height - statusStrip1.Height - groupBox1.Location.Y - GetSP(50);
             groupBox2.Height = Height - statusStrip1.Height - groupBox2.Location.Y - GetSP(50);
             groupBox3.Height = Height - statusStrip1.Height - groupBox3.Location.Y - GetSP(50);
-            listBox1.Height = groupBox1.Height - listBox1.Location.Y - GetSP(5);
-            listBox2.Height = groupBox2.Height - listBox2.Location.Y - GetSP(5);
+            listBox1.Height = groupBox1.Height - listBox1.Location.Y - GetSP(25);
+            listBox2.Height = groupBox2.Height - listBox2.Location.Y - GetSP(25);
+            comboBox2.Location = new Point(listBox1.Location.X, groupBox1.Height - GetSP(30));
+            comboBox3.Location = new Point(listBox2.Location.X, groupBox2.Height - GetSP(30));
             updateButton.Location = new Point(updateButton.Location.X, groupBox3.Height - updateButton.Height - GetSP(5));
             button4.Location = new Point(button4.Location.X, groupBox3.Height - button4.Height - GetSP(5));
             listBox3.Height = groupBox3.Height - listBox3.Location.Y - button4.Height - GetSP(5);
@@ -1370,6 +1463,15 @@ namespace slash_commands_gui_tool
         {
             return (int)(value * scale);
         }
+
+        public static Command[] commandType = new Command[]
+        {
+            new Command("CHAT_INPUT" ,1),
+            new Command("USER", 2),
+            new Command("MESSAGE", 3),
+            new Command("PRIMARY_ENTRY_POINT", 4)
+
+        };
 
         public static CommandType[] types = new CommandType[]
         {

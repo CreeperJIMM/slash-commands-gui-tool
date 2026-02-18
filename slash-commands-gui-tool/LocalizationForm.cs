@@ -130,7 +130,7 @@ namespace slash_commands_gui_tool
                     else Changed = false;
                 }
                 if (type == "name") {
-                    bool isValid = Regex.IsMatch(txt, @"^[a-zA-Z0-9_\p{L}-]+$");
+                    bool isValid = Regex.IsMatch(txt, @"^[a-zA-Z0-9_\p{L}-]+( [a-zA-Z0-9_\p{L}-]+)*$");
                     if (!isValid) {
                         DialogResult dialog = MessageBox.Show($"{Resource.Nameillegal2}\n\nError: {locale}", Resource.Warning, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                         if (dialog == DialogResult.OK) {

@@ -109,6 +109,7 @@ namespace DiscordAPI
                 this.bar = bar;
                 Timer();
             }
+            if(slash.type != 1) slash.description = null;
             string jsonData = JsonConvert.SerializeObject(slash);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var response = await client.PostAsync($"https://discord.com/api/v10/applications/{Client.ApplicationID}/commands", content);
@@ -206,7 +207,7 @@ namespace DiscordAPI
         public Dictionary<string, string>? name_localizations { get; set; }
         public string? description { get; set; }
         public Dictionary<string, string>? description_localizations { get; set; }
-        public string? default_member_permissions { get; set; }
+        public ulong? default_member_permissions { get; set; }
         public List<CommandOption>? options { get; set; }
         public bool? nsfw { get; set; }
         public static T? Clone<T>(T source)
@@ -242,6 +243,17 @@ namespace DiscordAPI
         public string? name { get; set; }
         public Dictionary<string, string>? name_localizations { get; set; }
         public object? value { get; set; }
+    }
+
+    public class Command
+    {
+        public string name { get; set; }
+        public int value { get; set; }
+        public Command (string name, int value)
+        {
+            this .name = name;
+            this .value = value;
+        }
     }
 
     public class CommandType

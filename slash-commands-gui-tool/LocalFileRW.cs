@@ -69,7 +69,12 @@ namespace LocalFileRW
         public bool WriteFile(SlashCommand[] slash)
         {
             try {
-                string jsonData = JsonConvert.SerializeObject(slash, Formatting.Indented);
+                slash = FilterSlash(slash);
+                JsonSerializerSettings settings = new JsonSerializerSettings {
+                    NullValueHandling = NullValueHandling.Ignore,
+                    Formatting = Formatting.Indented
+                };
+                string jsonData = JsonConvert.SerializeObject(slash, settings);
                 File.WriteAllText(FilePath, jsonData);
                 SavedWriteTime = File.GetLastWriteTime(FilePath);
                 return true;
@@ -77,6 +82,16 @@ namespace LocalFileRW
             catch {
                 return false;
             }
+        }
+        public SlashCommand[] FilterSlash(SlashCommand[] slashs)
+        {
+            foreach(SlashCommand slash in slashs) {
+                if (slash.type != 1) slash.description = null;
+                slash.id = null;
+                slash.application_id = null;
+                slash.version = null;
+            }
+            return slashs;
         }
         public String GetFilePath()
         {
