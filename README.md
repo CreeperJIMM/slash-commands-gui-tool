@@ -13,7 +13,8 @@ Slash commands for discord bot
 - [x] Edit parameters
 - [x] Edit Localizations(name, description)
 - [x] Manage Multi-client
-- [ ] Edit member permissions(Not yet done)
+- [x] Edit member permissions
+- [x] Full command type support
 
 ## Application Features
 - [x] Support multiple languages (Chinese, English)
@@ -22,8 +23,10 @@ Slash commands for discord bot
 - [x] Dark Mode
 - [x] Clean up data
 
-This tool use discord api v10, support command type 1 to 11:
-SUB_COMMAND, SUB_COMMAND_GROUP, STRING, INTEGER , BOOLEAN, USER, CHANNEL ,ROLE , MENTIONABLE, NUMBER, ATTACHMENT
+This tool use discord api v10, support slash command type 1 to 11:  
+SUB_COMMAND, SUB_COMMAND_GROUP, STRING, INTEGER , BOOLEAN, USER, CHANNEL ,ROLE , MENTIONABLE, NUMBER, ATTACHMENT  
+Also support application command type 1 to 4:  
+CHAT_INPUT, USER, MESSAGE, PRIMARY_ENTRY_POINT  
 
 ## Require
 ~~[.NET 8.0 Desktop Runtime (v8.0.12)](https://dotnet.microsoft.com/zh-tw/download/dotnet/thank-you/runtime-desktop-8.0.12-windows-x64-installer?cid=getdotnetcore)~~ <br> 
@@ -36,13 +39,27 @@ The application ONLY run on Windows.
 🖥️On Local eding: You can click on the new command(+) to start editing, but remember to click Save after editing.<br>
                 Next time, you can click Load to load the last command.
 
+## Notice
+Local command operation is recommended.  
+It is recommended to download the bot commands first before operating it.  
+Because it might have some bugs if you operate directly on bot commands!  
+
+## Hot Keys
+Ctrl+C (On option listbox) copy option.  
+Ctrl+V (On option listbox) paste option.  
+Ctrl+S: Quickly Save.  
+Ctrl+E: Open edit option form.  
+F1: Open about form.  
+F2: Quickly edit command name.  
+F5: Quickly reload.  
+
 ## Reporting Issues or Requesting Features
 If you encounter any issues while using this software or have suggestions for new features, please use the [Issues](https://github.com/CreeperJIMM/slash-commands-gui-tool/issues) page to let us know.
 
-1. Click on the [Issues](https://github.com/your-repo-owner/your-repo-name/issues) tab.
-2. Select the **New Issue** button.
-3. Provide a clear title and description, explaining the problem or feature request in detail.
-4. Submit the issue, and we will review it as soon as possible.
+1. Click on the [Issues](https://github.com/your-repo-owner/your-repo-name/issues) tab.  
+2. Select the **New Issue** button.  
+3. Provide a clear title and description, explaining the problem or feature request in detail.  
+4. Submit the issue, and we will review it as soon as possible.  
 
 Your feedback and contributions are greatly appreciated and help us improve the project. Thank you for your support!
 
