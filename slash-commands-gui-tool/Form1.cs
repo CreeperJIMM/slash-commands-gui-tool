@@ -1315,6 +1315,13 @@ namespace slash_commands_gui_tool
         }
         private void LocalSave(bool hint)
         {
+            if (NowSlash == null) return;
+            int index = LocalCache.FindIndex(m => m.name == NowSlash.name);
+            if( index != -1)
+                LocalCache[index] = NowSlash;
+            else
+                LocalCache.Add(NowSlash);
+
             if (Status && hint) {
                 MessageBox.Show(Resource.SaveLocalUnavailable, Resource.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
