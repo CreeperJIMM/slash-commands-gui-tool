@@ -13,7 +13,7 @@ namespace slash_commands_gui_tool
             InitializeComponent();
         }
 
-        static private readonly string _Version = "1.3";
+        static private readonly string _Version = "1.3.1";
         private void AboutForm_Load(object sender, EventArgs e)
         {
             if (Environment.Is64BitProcess) {
